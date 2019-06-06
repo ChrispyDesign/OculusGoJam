@@ -1,24 +1,35 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Shooter))]
+[RequireComponent(typeof(Raycaster))]
 public class InputPC : MonoBehaviour
 {
+    [SerializeField] private Gun m_gun;
+    [SerializeField] private Transform m_rightHandAnchor;
     [SerializeField] private Camera m_camera;
 
-    private Shooter m_shooter;
+    private Raycaster m_raycaster;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
-        m_shooter = GetComponent<Shooter>();
+        m_raycaster = GetComponent<Raycaster>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// 
+    /// </summary>
     void Update()
     {
+        Ray ray = m_camera.ScreenPointToRay(Input.mousePosition);
+
         if (Input.GetMouseButtonDown(0))
         {
-            m_shooter.Fire(transform.position, m_camera.WorldToScreenPoint(Input.mousePosition));
+            GameObject hitObject = m_raycaster.Raycast(ray);
+
+            if (hitObject && m_gun)
+                m_gun.Fire(hitObject);
         }
     }
 }
