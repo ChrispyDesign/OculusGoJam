@@ -12,6 +12,8 @@ public class UmpireControl : MonoBehaviour {
     bool isPlayerReady;
     bool timerRunning;
     bool isGameOver;
+    [HideInInspector]
+    public static bool isGameStarted;
 
     float reactionTimer;
 
@@ -19,6 +21,7 @@ public class UmpireControl : MonoBehaviour {
     public Text draw_txt;
     public Text again_txt;
 
+    public GameObject holster_OBJ;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +44,11 @@ public class UmpireControl : MonoBehaviour {
         {
             reactionTimer += Time.deltaTime;
         }
+
+        if (!isPlayerReady && Input.GetKeyDown(KeyCode.R))
+        {
+            onReadyPressed();
+        }
     }
 
 
@@ -59,6 +67,7 @@ public class UmpireControl : MonoBehaviour {
     {
         draw_txt.enabled = true;
         timerRunning = true;
+        isGameStarted = true;
         //Trigger related functions (e.g. Audio, UI)
     }
 
