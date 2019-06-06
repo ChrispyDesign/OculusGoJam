@@ -15,6 +15,7 @@ public class Gun : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] private float m_fireAmplitude = 0.5f;
 
+    // reload vibration variables
     [Header("Reload Vibration")]
     [SerializeField] private float m_reloadTime = 0.5f;
     [Range(0, 1)]
@@ -22,16 +23,24 @@ public class Gun : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] private float m_reloadAmplitude = 0.5f;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
         m_ammunition = new Ammunition(m_maxAmmo);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="target"></param>
+    /// <param name="inputVR"></param>
     public void Fire(GameObject target, InputOculus inputVR = null)
     {
         if (m_ammunition.CanFire())
         {
+            // can fire
             Debug.Log("Fire!");
             m_ammunition.Fire();
 
@@ -44,7 +53,16 @@ public class Gun : MonoBehaviour
         }
         else
         {
+            // cant fire - out of ammo
             Debug.Log("Out of ammo!");
         }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void Reload()
+    {
+        m_ammunition.Reload();
     }
 }

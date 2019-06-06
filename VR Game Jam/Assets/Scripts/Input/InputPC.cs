@@ -4,7 +4,6 @@
 public class InputPC : MonoBehaviour
 {
     [SerializeField] private Gun m_gun;
-    [SerializeField] private Transform m_rightHandAnchor;
     [SerializeField] private Camera m_camera;
 
     private Raycaster m_raycaster;
@@ -23,7 +22,7 @@ public class InputPC : MonoBehaviour
     void Update()
     {
         Ray ray = m_camera.ScreenPointToRay(Input.mousePosition);
-
+        
         if (Input.GetMouseButtonDown(0))
         {
             GameObject hitObject = m_raycaster.Raycast(ray);

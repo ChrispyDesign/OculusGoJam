@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CupRotator : MonoBehaviour
 {
+    [Header("Cup Creation")]
     [SerializeField] private GameObject m_cupPrefab;
     [SerializeField] private int m_cupCount;
     [SerializeField] private Transform m_cupAnchorPoint;
     [SerializeField] private Vector2 m_cupSpacing;
 
-    [SerializeField] private float m_rotateSpeed;
+    [Header("Cup Reveal")]
+    [SerializeField] private float m_cupRevealTime = 3;
+
+    [Header("Cup Rotation")]
+    [SerializeField] private float m_rotateTime = 1;
     [SerializeField] private float m_rotateFrequency;
 
     private List<GameObject> m_cups = new List<GameObject>();
+    private List<GameObject> m_availableCups = new List<GameObject>();
     private bool m_isRotating = false;
 
     // Start is called before the first frame update
@@ -22,6 +28,7 @@ public class CupRotator : MonoBehaviour
         {
             GameObject cup = Instantiate(m_cupPrefab, transform);
             m_cups.Add(cup);
+            m_availableCups.Add(m_cups[i]);
 
             Vector3 position = m_cupAnchorPoint.position;
             position.z += m_cupSpacing.y * (i - (m_cupCount / 2));
@@ -29,7 +36,7 @@ public class CupRotator : MonoBehaviour
             cup.transform.position = position;
         }
 
-        StartCoroutine(StartRotation());
+        StartCoroutine(ShowDesiredCup());
     }
 
     // Update is called once per frame
@@ -38,42 +45,79 @@ public class CupRotator : MonoBehaviour
 
     }
 
+    private IEnumerator ShowDesiredCup()
+    {
+        GameObject randomCup = m_cups[Random.Range(0, m_cups.Count)];
+        MeshRenderer cupMesh = randomCup.GetComponent<MeshRenderer>();
+        CupInteractable cup = randomCup.GetComponent<CupInteractable>();
+
+        cup.SetAsDesiredCup();
+        cupMesh.material.color = Color.green;
+
+        yield return new WaitForSeconds(m_cupRevealTime);
+
+        cupMesh.material.color = Color.white;
+        StartCoroutine(StartRotation());
+    }
+
     private IEnumerator StartRotation()
     {
-        StartCoroutine(Rotate());
+        GameObject cup1 = GetAvailableCup();
+        GameObject cup2 = GetAvailableCup();
+
+        if (cup1 != null && cup2 != null)
+            StartCoroutine(RotateCups(cup1, cup2));        
 
         yield return new WaitForSeconds(m_rotateFrequency);
 
         StartCoroutine(StartRotation());
     }
 
-    private IEnumerator Rotate()
+    private IEnumerator RotateCups(GameObject cup1, GameObject cup2)
     {
-        GameObject randomCup1 = m_cups[Random.Range(0, m_cups.Count)];
-        GameObject randomCup2 = m_cups[Random.Range(0, m_cups.Count)];
-
-        while (randomCup2 == randomCup1)
-            randomCup2 = m_cups[Random.Range(0, m_cups.Count)];
-
-        Vector3 midPoint = (randomCup1.transform.position + randomCup2.transform.position) * 0.5f;
+        Vector3 midPoint = (cup1.transform.position + cup2.transform.position) * 0.5f;
         midPoint.z = m_cupAnchorPoint.position.z;
 
+        GameObject parent = new GameObject();
+        parent.transform.SetParent(transform);
+        parent.transform.position += midPoint;
+        cup1.transform.SetParent(parent.transform);
+        cup2.transform.SetParent(parent.transform);
+        
         float timer = 0;
-        float rotateTime = m_rotateSpeed * Time.deltaTime * 180;
-        m_isRotating = true;
-
-        while (timer <= rotateTime)
+        while (timer <= m_rotateTime)
         {
-            rotateTime = m_rotateSpeed * Time.deltaTime * 180;
-            
-            randomCup1.transform.RotateAround(midPoint, Vector3.up, m_rotateSpeed * Time.deltaTime);
-            randomCup2.transform.RotateAround(midPoint, Vector3.up, m_rotateSpeed * Time.deltaTime);
-
             timer += Time.deltaTime;
 
+            parent.transform.eulerAngles = new Vector3(0, Mathf.Lerp(0, 180, timer / m_rotateTime), 0);
+        
             yield return null;
         }
 
-        m_isRotating = false;
+        cup1.transform.SetParent(transform);
+        cup2.transform.SetParent(transform);
+        Destroy(parent);
+
+        ReturnCupToPool(cup1);
+        ReturnCupToPool(cup2);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    private GameObject GetAvailableCup()
+    {
+        if (m_availableCups.Count <= 0)
+            return null;
+
+        GameObject randomCup = m_availableCups[Random.Range(0, m_availableCups.Count)];
+        m_availableCups.Remove(randomCup);
+        return randomCup;
+    }
+
+    private void ReturnCupToPool(GameObject cup)
+    {
+        m_availableCups.Add(cup);
     }
 }

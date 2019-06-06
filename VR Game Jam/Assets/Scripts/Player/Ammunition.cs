@@ -15,6 +15,10 @@ public class Ammunition
 
     #endregion
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="maxAmmo"></param>
     public Ammunition(int maxAmmo)
     {
         m_maxAmmo = maxAmmo;

@@ -2,6 +2,17 @@
 
 public class Raycaster : MonoBehaviour
 {
+    [SerializeField] private DrawLineRenderer m_lineRenderer;
+    [SerializeField] private Transform m_rightHandAnchor;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void Start()
+    {
+        m_lineRenderer = GetComponent<DrawLineRenderer>();
+    }
+
     /// <summary>
     /// function which performs a raycast
     /// </summary>
@@ -16,9 +27,13 @@ public class Raycaster : MonoBehaviour
         if (Physics.Raycast(origin, direction, out hit))
         {
             GameObject hitObject = hit.collider.gameObject;
-            
+            m_lineRenderer.Draw(m_rightHandAnchor.position, direction);
+
             if (hitObject)
+            {
+                m_lineRenderer.Draw(m_rightHandAnchor.position, hit.point);
                 return hitObject; // object was hit
+            }
         }
 
         return null; // no object was hit
@@ -37,9 +52,13 @@ public class Raycaster : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.collider.gameObject;
+            m_lineRenderer.Draw(m_rightHandAnchor.position, ray.direction);
 
             if (hitObject)
+            {
+                m_lineRenderer.Draw(m_rightHandAnchor.position, hit.point);
                 return hitObject; // object was hit
+            }
         }
 
         return null; // no object was hit
