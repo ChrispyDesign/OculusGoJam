@@ -2,15 +2,17 @@
 
 public class Raycaster : MonoBehaviour
 {
-    [SerializeField] private DrawLineRenderer m_lineRenderer;
+    [SerializeField] private LineRenderer m_lineRenderer;
     [SerializeField] private Transform m_rightHandAnchor;
+    private Vector3 m_direction;
 
     /// <summary>
     /// 
     /// </summary>
-    private void Start()
+    private void Update()
     {
-        m_lineRenderer = GetComponent<DrawLineRenderer>();
+        m_lineRenderer.SetPosition(0, m_rightHandAnchor.position);
+        m_lineRenderer.SetPosition(1, m_direction);
     }
 
     /// <summary>
@@ -22,16 +24,16 @@ public class Raycaster : MonoBehaviour
     public GameObject Raycast(Vector3 origin, Vector3 direction)
     {
         RaycastHit hit;
+        m_direction = direction;
 
         // perform raycast
         if (Physics.Raycast(origin, direction, out hit))
         {
             GameObject hitObject = hit.collider.gameObject;
-            m_lineRenderer.Draw(m_rightHandAnchor.position, direction);
 
             if (hitObject)
             {
-                m_lineRenderer.Draw(m_rightHandAnchor.position, hit.point);
+                m_direction = hit.point;
                 return hitObject; // object was hit
             }
         }
@@ -47,16 +49,16 @@ public class Raycaster : MonoBehaviour
     public GameObject Raycast(Ray ray)
     {
         RaycastHit hit;
+        m_direction = ray.direction;
 
         // perform raycast
         if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.collider.gameObject;
-            m_lineRenderer.Draw(m_rightHandAnchor.position, ray.direction);
 
             if (hitObject)
             {
-                m_lineRenderer.Draw(m_rightHandAnchor.position, hit.point);
+                m_direction = hit.point;
                 return hitObject; // object was hit
             }
         }

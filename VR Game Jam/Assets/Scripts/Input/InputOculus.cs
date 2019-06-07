@@ -22,10 +22,10 @@ public class InputOculus : MonoBehaviour
     {
         Vector3 origin = m_rightHandAnchor.position;
         Vector3 direction = m_rightHandAnchor.forward;
+        GameObject hitObject = m_raycaster.Raycast(origin, direction);
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            GameObject hitObject = m_raycaster.Raycast(origin, direction);
 
             if (m_gun)
                 m_gun.Fire(hitObject, this);

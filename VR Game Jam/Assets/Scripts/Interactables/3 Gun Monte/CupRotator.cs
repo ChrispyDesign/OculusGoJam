@@ -16,6 +16,13 @@ public class CupRotator : MonoBehaviour
     [Header("Cup Rotation")]
     [SerializeField] private float m_rotateTime = 1;
     [SerializeField] private float m_rotateFrequency;
+    [SerializeField] private float m_pauseTime;
+    [SerializeField] private Vector2 m_pauseOnRotationRange = new Vector2(5, 10);
+    private int m_currentNumberOfRotations = 0;
+    private int m_pauseOnRotation;
+
+    [Header("Umpire")]
+    [SerializeField] private UmpireControl m_umpire;
 
     private List<GameObject> m_cups = new List<GameObject>();
     private List<GameObject> m_availableCups = new List<GameObject>();
@@ -29,6 +36,7 @@ public class CupRotator : MonoBehaviour
             GameObject cup = Instantiate(m_cupPrefab, transform);
             m_cups.Add(cup);
             m_availableCups.Add(m_cups[i]);
+            cup.GetComponent<CupInteractable>().SetUmpire(m_umpire);
 
             Vector3 position = m_cupAnchorPoint.position;
             position.z += m_cupSpacing.y * (i - (m_cupCount / 2));
@@ -37,12 +45,6 @@ public class CupRotator : MonoBehaviour
         }
 
         StartCoroutine(ShowDesiredCup());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private IEnumerator ShowDesiredCup()
@@ -66,9 +68,20 @@ public class CupRotator : MonoBehaviour
         GameObject cup2 = GetAvailableCup();
 
         if (cup1 != null && cup2 != null)
-            StartCoroutine(RotateCups(cup1, cup2));        
+        {
+            StartCoroutine(RotateCups(cup1, cup2));
+            m_currentNumberOfRotations++;
+            m_pauseOnRotation = Random.Range((int)m_pauseOnRotationRange.x, (int)m_pauseOnRotationRange.y);
+        }
 
-        yield return new WaitForSeconds(m_rotateFrequency);
+        if (m_currentNumberOfRotations == m_pauseOnRotation)
+        {
+            m_currentNumberOfRotations = 0;
+            m_pauseOnRotation = Random.Range((int)m_pauseOnRotationRange.x, (int)m_pauseOnRotationRange.y);
+            yield return new WaitForSeconds(m_rotateFrequency + m_pauseTime);
+        }
+        else
+            yield return new WaitForSeconds(m_rotateFrequency);
 
         StartCoroutine(StartRotation());
     }
@@ -76,7 +89,6 @@ public class CupRotator : MonoBehaviour
     private IEnumerator RotateCups(GameObject cup1, GameObject cup2)
     {
         Vector3 midPoint = (cup1.transform.position + cup2.transform.position) * 0.5f;
-        midPoint.z = m_cupAnchorPoint.position.z;
 
         GameObject parent = new GameObject();
         parent.transform.SetParent(transform);
