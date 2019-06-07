@@ -41,12 +41,12 @@ public class MNTY_Umpire : MonoBehaviour
         doorList = new List<GameObject>();
         for (int i = 1; i < 6; i++)
         {
-            string doorName = "Door" + i.ToString();
+            string doorName = "MontyDoor" + i.ToString();
 
             GameObject doorOBJ = GameObject.Find(doorName);
             doorList.Add(doorOBJ);
         }
-        offset = new Vector3(1.55f, 0.0f, 1.1f);
+        //offset = new Vector3(1.55f, 0.0f, 1.1f);
         setupMNTY(testDifficulty);
         isDrawSignalSent = false;
     }
@@ -74,8 +74,9 @@ public class MNTY_Umpire : MonoBehaviour
             selectedDoor.GetComponent<MNTY_Door>().setWillBeOpenedTrue();
             GameObject go = Instantiate(prefab_SuccessTarget);
             //go.transform.SetParent(selectedDoor.transform);
-            go.transform.position = selectedDoor.transform.position + offset;
-            m_opponents.Add(go);
+            Vector3 target_pos = selectedDoor.transform.GetChild(1).position;
+            go.transform.position = target_pos;
+            UmpireControl.m_opponents.Add(go);
 
             temp_doors.Remove(selectedDoor);
         }
@@ -87,7 +88,8 @@ public class MNTY_Umpire : MonoBehaviour
             selectedDoor.GetComponent<MNTY_Door>().setWillBeOpenedTrue();
             GameObject go = Instantiate(prefab_FailureTarget);
             //go.transform.SetParent(selectedDoor.transform);
-            go.transform.position = selectedDoor.transform.position + offset;
+            Vector3 target_pos = selectedDoor.transform.GetChild(1).position;
+            go.transform.position = target_pos;
 
             temp_doors.Remove(selectedDoor);
         }

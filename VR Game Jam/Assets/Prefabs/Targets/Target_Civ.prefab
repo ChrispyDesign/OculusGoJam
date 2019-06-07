@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3444906693134080720}
-  - component: {fileID: 1757810664474980301}
   - component: {fileID: 267817933857438033}
+  - component: {fileID: 3402805794604383454}
   m_Layer: 0
-  m_Name: Target_Bandit
+  m_Name: Target_Civ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,18 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1757810664474980301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5973513245101442445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f7a243b87e46541807fa5ff1d9a286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &267817933857438033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,6 +46,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0746589, y: 1.7228136, z: 0.16982055}
   m_Center: {x: 0.0017775297, y: 0.859457, z: 0.002116859}
+--- !u!114 &3402805794604383454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5973513245101442445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07a554734952554b83bc6a9daca0550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2667872691903706510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75e1b365151933e449aac3404745fc43, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
 --- !u!4 &2667872691903835918 stripped

@@ -19,13 +19,12 @@ public class UmpireControl : MonoBehaviour {
 
     public Text ready_txt;
     public Text draw_txt;
-    public Text again_txt;
 
     [HideInInspector]
     public static bool isObjectiveComplete;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         resetAll();
 	}
 	
@@ -87,7 +86,6 @@ public class UmpireControl : MonoBehaviour {
         reactionTimer       = 0.0f;
         draw_txt.enabled    = false;
         isGameOver          = false;
-        again_txt.enabled   = false;
         ready_txt.enabled   = true;
         isObjectiveComplete = false;
     }
@@ -104,7 +102,7 @@ public class UmpireControl : MonoBehaviour {
         timerRunning = false;
         draw_txt.text = reactionTimer.ToString();
         isGameOver = true;
-        again_txt.enabled = true;
+
         //Trigger related functions (e.g. Audio, UI)
 
     }
