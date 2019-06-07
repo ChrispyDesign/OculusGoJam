@@ -21,6 +21,9 @@ public class CupRotator : MonoBehaviour
     private int m_currentNumberOfRotations = 0;
     private int m_pauseOnRotation;
 
+    [Header("Umpire")]
+    [SerializeField] private UmpireControl m_umpire;
+
     private List<GameObject> m_cups = new List<GameObject>();
     private List<GameObject> m_availableCups = new List<GameObject>();
     private bool m_isRotating = false;
@@ -33,6 +36,7 @@ public class CupRotator : MonoBehaviour
             GameObject cup = Instantiate(m_cupPrefab, transform);
             m_cups.Add(cup);
             m_availableCups.Add(m_cups[i]);
+            cup.GetComponent<CupInteractable>().SetUmpire(m_umpire);
 
             Vector3 position = m_cupAnchorPoint.position;
             position.z += m_cupSpacing.y * (i - (m_cupCount / 2));
@@ -85,7 +89,6 @@ public class CupRotator : MonoBehaviour
     private IEnumerator RotateCups(GameObject cup1, GameObject cup2)
     {
         Vector3 midPoint = (cup1.transform.position + cup2.transform.position) * 0.5f;
-        midPoint.z = m_cupAnchorPoint.position.z;
 
         GameObject parent = new GameObject();
         parent.transform.SetParent(transform);
