@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6713539655855760070}
   - component: {fileID: 4984961799990529656}
   - component: {fileID: 8987530218051732382}
+  - component: {fileID: 7814247264969556935}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Bystander
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,3 +93,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7814247264969556935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4532084607219467288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07a554734952554b83bc6a9daca0550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

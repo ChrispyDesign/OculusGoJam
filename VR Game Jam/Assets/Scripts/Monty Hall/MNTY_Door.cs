@@ -14,7 +14,7 @@ public class MNTY_Door : MonoBehaviour
     public float doorOpenTime;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         willBeOpened = false;
         isOpening = false;
@@ -38,18 +38,13 @@ public class MNTY_Door : MonoBehaviour
         }
     }
 
-    public void setWillBeOpened(bool choice)
+    public void setWillBeOpenedTrue()
     {
-        willBeOpened = choice;
+        willBeOpened = true;
     }
 
     public void onDrawSignal()
     {
         if (willBeOpened) { isOpening = true; /*runDoorOpen();*/ }
-    }
-
-    void runDoorOpen()
-    {
-        isOpening = true;
     }
 }

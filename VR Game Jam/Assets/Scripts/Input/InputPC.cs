@@ -8,6 +8,7 @@ public class InputPC : MonoBehaviour
 
     private Raycaster m_raycaster;
 
+
     /// <summary>
     /// 
     /// </summary>
@@ -29,6 +30,11 @@ public class InputPC : MonoBehaviour
 
             if (hitObject && m_gun)
                 m_gun.Fire(hitObject);
+        }
+
+        if (m_raycaster.Raycast(ray) == m_gun.m_holster)
+        {
+            m_gun.m_umpire.onReadyPressed();
         }
     }
 }

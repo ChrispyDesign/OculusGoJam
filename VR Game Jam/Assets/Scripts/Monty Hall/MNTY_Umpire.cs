@@ -67,10 +67,11 @@ public class MNTY_Umpire : MonoBehaviour
         {
             int doorListSelect = UnityEngine.Random.Range(0, temp_doors.Count - 1);
             GameObject selectedDoor = temp_doors[doorListSelect];
-            selectedDoor.GetComponent<MNTY_Door>().setWillBeOpened(true);
+            selectedDoor.GetComponent<MNTY_Door>().setWillBeOpenedTrue();
             GameObject go = Instantiate(prefab_SuccessTarget);
             //go.transform.SetParent(selectedDoor.transform);
             go.transform.position = selectedDoor.transform.position + offset;
+            UmpireControl.m_opponents.Add(go);
 
             temp_doors.Remove(selectedDoor);
         }
@@ -79,7 +80,7 @@ public class MNTY_Umpire : MonoBehaviour
         {
             int doorListSelect = UnityEngine.Random.Range(0, temp_doors.Count - 1);
             GameObject selectedDoor = temp_doors[doorListSelect];
-            selectedDoor.GetComponent<MNTY_Door>().setWillBeOpened(true);
+            selectedDoor.GetComponent<MNTY_Door>().setWillBeOpenedTrue();
             GameObject go = Instantiate(prefab_FailureTarget);
             //go.transform.SetParent(selectedDoor.transform);
             go.transform.position = selectedDoor.transform.position + offset;

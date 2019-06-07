@@ -9,7 +9,7 @@ public class UmpireControl : MonoBehaviour {
     public float preDrawTime_max;
     float preDrawTime;
 
-    bool isPlayerReady;
+    public static bool isPlayerReady;
     bool timerRunning;
     bool isGameOver;
     [HideInInspector]
@@ -21,11 +21,14 @@ public class UmpireControl : MonoBehaviour {
     public Text draw_txt;
     public Text again_txt;
 
-    public GameObject holster_OBJ;
+    [HideInInspector]
+    public static List<GameObject> m_opponents;
 
 	// Use this for initialization
 	void Start () {
         resetAll();
+        m_opponents = new List<GameObject>();
+
 	}
 	
 	// Update is called once per frame
@@ -44,11 +47,6 @@ public class UmpireControl : MonoBehaviour {
         {
             reactionTimer += Time.deltaTime;
         }
-
-        if (!isPlayerReady && Input.GetKeyDown(KeyCode.R))
-        {
-            onReadyPressed();
-        }
     }
 
 
@@ -61,6 +59,10 @@ public class UmpireControl : MonoBehaviour {
             ready_txt.enabled = false;
             //Trigger related functions (e.g. Audio, UI)
         }
+        if (m_opponents.Count == 0)
+        {
+            gameSuccess();
+        }
     }
 
     void onDrawIntiated()
@@ -69,19 +71,6 @@ public class UmpireControl : MonoBehaviour {
         timerRunning = true;
         isGameStarted = true;
         //Trigger related functions (e.g. Audio, UI)
-    }
-
-    public void onShootPressed()
-    {
-        if (timerRunning)
-        {
-            timerRunning = false;
-            draw_txt.text = reactionTimer.ToString();
-            isGameOver = true;
-            again_txt.enabled = true;
-            //Trigger related functions (e.g. Audio, UI)
-        }
-
     }
 
     public void onResetPressed()
@@ -102,5 +91,27 @@ public class UmpireControl : MonoBehaviour {
         isGameOver          = false;
         again_txt.enabled   = false;
         ready_txt.enabled   = true;
+    }
+
+    public void gameFailed()
+    {
+        //GameOver stuff
+
+    }
+
+    void gameSuccess()
+    {
+        //game success things
+        timerRunning = false;
+        draw_txt.text = reactionTimer.ToString();
+        isGameOver = true;
+        again_txt.enabled = true;
+        //Trigger related functions (e.g. Audio, UI)
+
+    }
+
+    public void onOpponentShot (GameObject go)
+    {
+        m_opponents.Remove(go);
     }
 }
