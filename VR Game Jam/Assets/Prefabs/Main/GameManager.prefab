@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 397368686098224420}
   - component: {fileID: 397368686098224419}
   m_Layer: 0
-  m_Name: Umpire
+  m_Name: GameUmpire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,8 +477,6 @@ MonoBehaviour:
   preDrawTime_max: 0
   ready_txt: {fileID: 397368685558334063}
   draw_txt: {fileID: 397368684678550968}
-  again_txt: {fileID: 0}
-  holster_OBJ: {fileID: 0}
 --- !u!1 &397368686195106468
 GameObject:
   m_ObjectHideFlags: 0

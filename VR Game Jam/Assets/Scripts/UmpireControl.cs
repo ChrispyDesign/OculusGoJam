@@ -97,7 +97,7 @@ public class UmpireControl : MonoBehaviour {
 
     }
 
-    void gameSuccess()
+    public void gameSuccess()
     {
         //game success things
         timerRunning = false;
