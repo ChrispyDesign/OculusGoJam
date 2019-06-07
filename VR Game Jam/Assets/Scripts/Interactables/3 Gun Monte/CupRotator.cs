@@ -16,6 +16,10 @@ public class CupRotator : MonoBehaviour
     [Header("Cup Rotation")]
     [SerializeField] private float m_rotateTime = 1;
     [SerializeField] private float m_rotateFrequency;
+    [SerializeField] private float m_pauseTime;
+    [SerializeField] private Vector2 m_pauseOnRotationRange = new Vector2(5, 10);
+    private int m_currentNumberOfRotations = 0;
+    private int m_pauseOnRotation;
 
     private List<GameObject> m_cups = new List<GameObject>();
     private List<GameObject> m_availableCups = new List<GameObject>();
@@ -39,12 +43,6 @@ public class CupRotator : MonoBehaviour
         StartCoroutine(ShowDesiredCup());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private IEnumerator ShowDesiredCup()
     {
         GameObject randomCup = m_cups[Random.Range(0, m_cups.Count)];
@@ -66,9 +64,20 @@ public class CupRotator : MonoBehaviour
         GameObject cup2 = GetAvailableCup();
 
         if (cup1 != null && cup2 != null)
-            StartCoroutine(RotateCups(cup1, cup2));        
+        {
+            StartCoroutine(RotateCups(cup1, cup2));
+            m_currentNumberOfRotations++;
+            m_pauseOnRotation = Random.Range((int)m_pauseOnRotationRange.x, (int)m_pauseOnRotationRange.y);
+        }
 
-        yield return new WaitForSeconds(m_rotateFrequency);
+        if (m_currentNumberOfRotations == m_pauseOnRotation)
+        {
+            m_currentNumberOfRotations = 0;
+            m_pauseOnRotation = Random.Range((int)m_pauseOnRotationRange.x, (int)m_pauseOnRotationRange.y);
+            yield return new WaitForSeconds(m_rotateFrequency + m_pauseTime);
+        }
+        else
+            yield return new WaitForSeconds(m_rotateFrequency);
 
         StartCoroutine(StartRotation());
     }
