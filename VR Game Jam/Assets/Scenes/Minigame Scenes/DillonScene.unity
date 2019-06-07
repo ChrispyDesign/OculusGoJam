@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGameScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 5117181976141616661, guid: 3a51daa7411f6844596ffe52344c8fe8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5117181976141616662, guid: 3a51daa7411f6844596ffe52344c8fe8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -211,10 +216,6 @@ PrefabInstance:
       propertyPath: m_textInfo.lineCount
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1454285804, guid: 3a51daa7411f6844596ffe52344c8fe8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.66
-      objectReference: {fileID: 0}
     - target: {fileID: 1395601515, guid: 3a51daa7411f6844596ffe52344c8fe8, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -226,6 +227,10 @@ PrefabInstance:
     - target: {fileID: 1395601513, guid: 3a51daa7411f6844596ffe52344c8fe8, type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454285804, guid: 3a51daa7411f6844596ffe52344c8fe8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a51daa7411f6844596ffe52344c8fe8, type: 3}
