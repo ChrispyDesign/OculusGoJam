@@ -76,7 +76,7 @@ public class MNTY_Umpire : MonoBehaviour
             //go.transform.SetParent(selectedDoor.transform);
             Vector3 target_pos = selectedDoor.transform.GetChild(1).position;
             go.transform.position = target_pos;
-            UmpireControl.m_opponents.Add(go);
+            m_opponents.Add(go);
 
             temp_doors.Remove(selectedDoor);
         }

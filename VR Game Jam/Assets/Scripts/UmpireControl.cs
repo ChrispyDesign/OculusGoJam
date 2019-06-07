@@ -48,15 +48,15 @@ public class UmpireControl : MonoBehaviour {
 
 
 
-    public void onReadyPressed()
+    public void onHolster()
     {
-        if (!isPlayerReady)
+        if (!isPlayerReady)                                 //Set player as ready at start of game
         {
             isPlayerReady = true;
             ready_txt.enabled = false;
             //Trigger related functions (e.g. Audio, UI)
         }
-        if (isObjectiveComplete)
+        if (isObjectiveComplete)                            //
         {
             gameSuccess();
         }

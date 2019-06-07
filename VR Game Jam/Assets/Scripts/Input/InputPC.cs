@@ -34,7 +34,7 @@ public class InputPC : MonoBehaviour
 
         if (m_raycaster.Raycast(ray) == m_gun.m_holster)
         {
-            m_gun.m_umpire.onReadyPressed();
+            m_gun.m_umpire.onHolster();
         }
     }
 }
