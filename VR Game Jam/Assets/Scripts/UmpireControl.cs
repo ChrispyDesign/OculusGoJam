@@ -22,13 +22,11 @@ public class UmpireControl : MonoBehaviour {
     public Text again_txt;
 
     [HideInInspector]
-    public static List<GameObject> m_opponents;
+    public static bool isObjectiveComplete;
 
 	// Use this for initialization
 	void Start () {
         resetAll();
-        m_opponents = new List<GameObject>();
-
 	}
 	
 	// Update is called once per frame
@@ -59,7 +57,7 @@ public class UmpireControl : MonoBehaviour {
             ready_txt.enabled = false;
             //Trigger related functions (e.g. Audio, UI)
         }
-        if (m_opponents.Count == 0)
+        if (isObjectiveComplete)
         {
             gameSuccess();
         }
@@ -91,6 +89,7 @@ public class UmpireControl : MonoBehaviour {
         isGameOver          = false;
         again_txt.enabled   = false;
         ready_txt.enabled   = true;
+        isObjectiveComplete = false;
     }
 
     public void gameFailed()
@@ -99,7 +98,7 @@ public class UmpireControl : MonoBehaviour {
 
     }
 
-    void gameSuccess()
+    public void gameSuccess()
     {
         //game success things
         timerRunning = false;
@@ -108,10 +107,5 @@ public class UmpireControl : MonoBehaviour {
         again_txt.enabled = true;
         //Trigger related functions (e.g. Audio, UI)
 
-    }
-
-    public void onOpponentShot (GameObject go)
-    {
-        m_opponents.Remove(go);
     }
 }

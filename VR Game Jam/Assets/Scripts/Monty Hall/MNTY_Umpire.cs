@@ -32,8 +32,12 @@ public class MNTY_Umpire : MonoBehaviour
 
     bool isDrawSignalSent;
 
+    [HideInInspector]
+    public static List<GameObject> m_opponents;
+
     void Start()
     {
+        m_opponents = new List<GameObject>();
         doorList = new List<GameObject>();
         for (int i = 1; i < 6; i++)
         {
@@ -71,7 +75,7 @@ public class MNTY_Umpire : MonoBehaviour
             GameObject go = Instantiate(prefab_SuccessTarget);
             //go.transform.SetParent(selectedDoor.transform);
             go.transform.position = selectedDoor.transform.position + offset;
-            UmpireControl.m_opponents.Add(go);
+            m_opponents.Add(go);
 
             temp_doors.Remove(selectedDoor);
         }
@@ -102,8 +106,13 @@ public class MNTY_Umpire : MonoBehaviour
             onDrawSignal();
             isDrawSignalSent = true;
         }
-    }
 
+        if (m_opponents.Count == 0)
+        {
+            UmpireControl.isObjectiveComplete = true;
+        }
+    }
+    
     public void onDrawSignal()
     {
         foreach (GameObject door in doorList)
@@ -112,4 +121,8 @@ public class MNTY_Umpire : MonoBehaviour
         }
     }
 
+    public void onOpponentShot(GameObject go)
+    {
+        m_opponents.Remove(go);
+    }
 }

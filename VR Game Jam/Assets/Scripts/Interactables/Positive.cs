@@ -7,7 +7,7 @@ public class Positive : Interactable
     public override void OnInteract()
     {
         Debug.Log("Yay!");
-        GameObject.Find("GameUmpire").GetComponent<UmpireControl>().onOpponentShot(gameObject);
+        FindObjectOfType<MNTY_Umpire>().onOpponentShot(gameObject);
         Destroy(gameObject);
     }
 }
