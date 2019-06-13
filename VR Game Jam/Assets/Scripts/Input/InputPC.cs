@@ -23,18 +23,12 @@ public class InputPC : MonoBehaviour
     void Update()
     {
         Ray ray = m_camera.ScreenPointToRay(Input.mousePosition);
-        
+        GameObject hitObject = m_raycaster.Raycast(ray);
+
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject hitObject = m_raycaster.Raycast(ray);
-
             if (hitObject && m_gun)
                 m_gun.Fire(hitObject);
-        }
-
-        if (m_raycaster.Raycast(ray) == m_gun.m_holster)
-        {
-            m_gun.m_umpire.onHolster();
         }
     }
 }

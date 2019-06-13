@@ -22,7 +22,7 @@ public class Ammunition
     public Ammunition(int maxAmmo)
     {
         m_maxAmmo = maxAmmo;
-        m_currentAmmo = m_maxAmmo;
+        m_currentAmmo = 0;
     }
 
     /// <summary>

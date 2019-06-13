@@ -6,6 +6,7 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] private int m_maxAmmo = 6;
     private Ammunition m_ammunition;
+    private bool m_isGunInitiated = false;
 
     // fire vibration variables
     [Header("Fire Vibration")]
@@ -23,19 +24,21 @@ public class Gun : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] private float m_reloadAmplitude = 0.5f;
 
-    [HideInInspector]
-    public GameObject m_holster;
-    [HideInInspector]
-    public UmpireControl m_umpire;
-
     /// <summary>
     /// 
     /// </summary>
     void Start()
     {
         m_ammunition = new Ammunition(m_maxAmmo);
-        m_holster = GameObject.Find("Holster");
-        m_umpire = GameObject.Find("GameUmpire").GetComponent<UmpireControl>();
+    }
+
+    private void Update()
+    {
+        if (UmpireControl.isGameStarted && !m_isGunInitiated)
+        {
+            m_ammunition.Reload();
+            m_isGunInitiated = true;
+        }
     }
 
     /// <summary>
@@ -48,7 +51,6 @@ public class Gun : MonoBehaviour
         if (m_ammunition.CanFire())
         {
             // can fire
-            Debug.Log("Fire!");
             m_ammunition.Fire();
 
             if (inputVR)

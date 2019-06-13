@@ -26,9 +26,10 @@ public class InputOculus : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-
             if (m_gun)
+            {
                 m_gun.Fire(hitObject, this);
+            }
         }
     }
 

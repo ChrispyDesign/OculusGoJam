@@ -46,8 +46,6 @@ public class UmpireControl : MonoBehaviour {
         }
     }
 
-
-
     public void onHolster()
     {
         if (!isPlayerReady)                                 //Set player as ready at start of game
@@ -59,6 +57,14 @@ public class UmpireControl : MonoBehaviour {
         if (isObjectiveComplete)                            //
         {
             gameSuccess();
+        }
+    }
+
+    public void onUnholster()
+    {
+        if (isPlayerReady && !isGameStarted)
+        {
+            gameFailed();
         }
     }
 
@@ -93,7 +99,8 @@ public class UmpireControl : MonoBehaviour {
     public void gameFailed()
     {
         //GameOver stuff
-
+        Debug.Log("Failed");
+        resetAll();
     }
 
     public void gameSuccess()

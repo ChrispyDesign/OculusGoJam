@@ -32,7 +32,5 @@ public class CupInteractable : Interactable
             Debug.Log("Game over!");
             m_umpire.gameFailed();
         }
-
-        Destroy(gameObject);
     }
 }

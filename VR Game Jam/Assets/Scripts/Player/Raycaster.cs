@@ -6,6 +6,9 @@ public class Raycaster : MonoBehaviour
     [SerializeField] private Transform m_rightHandAnchor;
     private Vector3 m_direction;
 
+    private GameObject m_hoveredObject;
+    private GameObject m_unhoveredObject;
+
     /// <summary>
     /// 
     /// </summary>
@@ -33,6 +36,9 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
+                if (m_hoveredObject != hitObject)
+                    Hover(hitObject);
+
                 m_direction = hit.point;
                 return hitObject; // object was hit
             }
@@ -58,11 +64,41 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
+                if (m_hoveredObject != hitObject)
+                    Hover(hitObject);
+
                 m_direction = hit.point;
                 return hitObject; // object was hit
             }
         }
 
         return null; // no object was hit
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="hitObject"></param>
+    private void Hover(GameObject hitObject)
+    {
+        if (m_unhoveredObject == null || m_hoveredObject == null)
+        {
+            Debug.Log("Test");
+        }
+
+        if (m_unhoveredObject != m_hoveredObject)
+        {
+            m_unhoveredObject = m_hoveredObject; // store unhovered object
+
+            HolsterZone unhoveredHolster = m_unhoveredObject.GetComponent<HolsterZone>();
+            if (unhoveredHolster)
+                unhoveredHolster.OnUnhover();
+        }
+
+        m_hoveredObject = hitObject; // store hovered object
+
+        HolsterZone hoveredHolster = m_hoveredObject.GetComponent<HolsterZone>();
+        if (hoveredHolster)
+            hoveredHolster.OnHover();
     }
 }
