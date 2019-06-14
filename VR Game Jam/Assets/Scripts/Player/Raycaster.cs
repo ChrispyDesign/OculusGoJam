@@ -36,7 +36,9 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
-                if (m_hoveredObject != hitObject)
+                HolsterZone holsterZone = hitObject.GetComponent<HolsterZone>();
+
+                if (m_hoveredObject != hitObject && holsterZone)
                     Hover(hitObject);
 
                 m_direction = hit.point;
@@ -64,7 +66,9 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
-                if (m_hoveredObject != hitObject)
+                HolsterZone holsterZone = hitObject.GetComponent<HolsterZone>();
+
+                if (m_hoveredObject != hitObject && holsterZone)
                     Hover(hitObject);
 
                 m_direction = hit.point;

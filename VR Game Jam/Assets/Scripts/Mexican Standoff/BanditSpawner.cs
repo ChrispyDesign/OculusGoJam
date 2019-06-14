@@ -39,6 +39,10 @@ public class BanditSpawner : MonoBehaviour
             GameObject bandit = Instantiate(m_banditPrefab, spawnTransform);
             bandit.SetActive(false);
             m_bandits.Add(bandit);
+
+            // inject bandit spawner dependency into bandit
+            Bandit banditScript = bandit.GetComponent<Bandit>();
+            banditScript.SetBanditSpawner(this);
         }
     }
 
@@ -51,14 +55,28 @@ public class BanditSpawner : MonoBehaviour
         {
             for (int i = 0; i < m_bandits.Count; i++)
             {
+                // show the bandit
                 GameObject bandit = m_bandits[i];
                 bandit.SetActive(true);
 
+                // start the bandit's countdown
                 Bandit banditScript = bandit.GetComponent<Bandit>();
                 banditScript.StartFireCountdown();
             }
 
             m_isGameStarted = true;
         }
+
+        if (m_bandits.Count == 0)
+            FindObjectOfType<UmpireControl>().gameSuccess();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="bandit"></param>
+    public void RemoveBandit(GameObject bandit)
+    {
+        m_bandits.Remove(bandit);
     }
 }
