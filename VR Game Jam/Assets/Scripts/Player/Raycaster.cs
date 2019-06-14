@@ -81,11 +81,6 @@ public class Raycaster : MonoBehaviour
     /// <param name="hitObject"></param>
     private void Hover(GameObject hitObject)
     {
-        if (m_unhoveredObject == null || m_hoveredObject == null)
-        {
-            Debug.Log("Test");
-        }
-
         if (m_unhoveredObject != m_hoveredObject)
         {
             m_unhoveredObject = m_hoveredObject; // store unhovered object

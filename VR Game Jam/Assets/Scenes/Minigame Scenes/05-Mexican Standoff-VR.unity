@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '---MENU---'
       objectReference: {fileID: 0}
+    - target: {fileID: 4997700149932758252, guid: 5173bed9632dcf446b8d326b4fd6ba23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4997700149932758243, guid: 5173bed9632dcf446b8d326b4fd6ba23,
         type: 3}
       propertyPath: m_LocalPosition.x
