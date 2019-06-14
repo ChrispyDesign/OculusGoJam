@@ -48,22 +48,27 @@ public class Gun : MonoBehaviour
     /// <param name="inputVR"></param>
     public void Fire(GameObject target, InputOculus inputVR = null)
     {
-        if (m_ammunition.CanFire())
+        Interactable interactable = target.GetComponent<Interactable>();
+
+        if (interactable)
         {
-            // can fire
-            m_ammunition.Fire();
+            if (interactable.IsShootableAnytime()) // menu interactables
+            {
+                interactable.OnInteract(); // shoot but don't decrease ammo
+            }
+            else if (UmpireControl.isGameStarted) // game interactables
+            {
+                if (m_ammunition.CanFire()) // does the player have ammo?
+                {
+                    interactable.OnInteract(); // shoot
+                    m_ammunition.Fire(); // and decrease ammo
+                }
+            }
+            else
+                return;
 
             if (inputVR)
                 inputVR.StartVibrate(m_fireTime, m_fireFrequency, m_fireAmplitude);
-
-            Interactable interactable = target.GetComponent<Interactable>();
-            if (interactable)
-                interactable.OnInteract();
-        }
-        else
-        {
-            // cant fire - out of ammo - add a gun click sound
-            Debug.Log("Out of ammo!");
         }
     }
 

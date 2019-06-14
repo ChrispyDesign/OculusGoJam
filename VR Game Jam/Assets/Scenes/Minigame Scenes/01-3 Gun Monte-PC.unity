@@ -286,6 +286,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 396418596475379719, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_isShootableAnytime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890006597715222199, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_isShootableAnytime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae45deffbc704b54084943f3248aaede, type: 3}
 --- !u!4 &273936320 stripped
@@ -542,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2f14fc5aa1a1a4f90da63b4293afd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isShootableAnytime: 0
   m_umpire: {fileID: 1946900096}
 --- !u!1 &883488073
 GameObject:
