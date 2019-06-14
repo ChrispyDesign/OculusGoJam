@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Minigame Scenes/02-Monty Hall-PC.unity
     guid: 843b4b2e2ac628948aed25ca67a31642
+  - enabled: 0
+    path: Assets/Scenes/Menus/Main Menu.unity
+    guid: c34e63ba54c80aa4cae041c320583351
   - enabled: 1
     path: Assets/Scenes/Minigame Scenes/01-3 Gun Monte-VR.unity
     guid: 7af609be49a781f4cb7d7f57ca087f8b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Minigame Scenes/02-Monty Hall-VR.unity
     guid: 9bdd21431b8971b46a67790bc82a593b
   m_configObjects: {}

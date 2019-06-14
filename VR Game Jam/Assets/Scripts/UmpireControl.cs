@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UmpireControl : MonoBehaviour {
 
@@ -10,19 +11,20 @@ public class UmpireControl : MonoBehaviour {
     public float preDrawTime_max;
     float preDrawTime;
 
-    public static bool isPlayerReady;
-    bool timerRunning;
-    bool isGameOver;
+    public static bool isPlayerReady = false;
+    bool timerRunning = false;
+    bool isGameOver = false;
     [HideInInspector]
-    public static bool isGameStarted;
+    public static bool isGameStarted = false;
 
     float reactionTimer;
 
-    public Text ready_txt;
-    public Text draw_txt;
+    public TextMeshPro ready_txt;
+    public TextMeshPro draw_txt;
+    public TextMeshPro timer_txt;
 
     [HideInInspector]
-    public static bool isObjectiveComplete;
+    public static bool isObjectiveComplete = false;
 
 	// Use this for initialization
 	void Awake () {
@@ -35,7 +37,7 @@ public class UmpireControl : MonoBehaviour {
         if (isPlayerReady && !timerRunning && !isGameOver)            //When Player ready, countdown timer to "Draw!"
         {
             preDrawTime -= Time.deltaTime;
-            draw_txt.text = "DRAW!";
+
             if (preDrawTime <= 0.0f)                        //When "Draw!" occurs, start the timer
             {
                 onDrawIntiated();
@@ -44,6 +46,11 @@ public class UmpireControl : MonoBehaviour {
         else if (timerRunning)                              //Adds to reaction timer
         {
             reactionTimer += Time.deltaTime;
+        }
+        if (isObjectiveComplete)                            //
+        {
+            gameSuccess();
+            isObjectiveComplete = false;
         }
     }
 
@@ -54,10 +61,6 @@ public class UmpireControl : MonoBehaviour {
             isPlayerReady = true;
             ready_txt.enabled = false;
             //Trigger related functions (e.g. Audio, UI)
-        }
-        if (isObjectiveComplete)                            //
-        {
-            gameSuccess();
         }
     }
 
@@ -92,9 +95,11 @@ public class UmpireControl : MonoBehaviour {
         timerRunning        = false;
         reactionTimer       = 0.0f;
         draw_txt.enabled    = false;
+        timer_txt.enabled   = false;
         isGameOver          = false;
         ready_txt.enabled   = true;
         isObjectiveComplete = false;
+        isGameStarted       = false;
     }
 
     public void gameFailed()
@@ -106,7 +111,10 @@ public class UmpireControl : MonoBehaviour {
     {
         //game success things
         timerRunning = false;
-        draw_txt.text = reactionTimer.ToString();
+        draw_txt.enabled = false;
+        double reactTimeDisplay = System.Math.Round(reactionTimer, 2);
+        timer_txt.text = reactTimeDisplay.ToString();
+        timer_txt.enabled = true;
         isGameOver = true;
 
         //Trigger related functions (e.g. Audio, UI)

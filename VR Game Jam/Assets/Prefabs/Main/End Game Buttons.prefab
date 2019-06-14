@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2296108763458595633, guid: 609295140d7f509479b09ff743668e28,
+        type: 3}
+      propertyPath: m_isShootableAnytime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3331561395238828671, guid: 609295140d7f509479b09ff743668e28,
         type: 3}
       propertyPath: m_Mesh
@@ -107,12 +112,12 @@ PrefabInstance:
     - target: {fileID: 3331561395238828669, guid: 609295140d7f509479b09ff743668e28,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3331561395238828669, guid: 609295140d7f509479b09ff743668e28,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609295140d7f509479b09ff743668e28, type: 3}
@@ -189,20 +194,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4941165903590208925, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
+    - target: {fileID: 4683024276004819521, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_isShootableAnytime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4941165903590208927, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4941165903590208927, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941165903590208925, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d70bb3fda2d5d49aa0ab4c434184c9, type: 3}

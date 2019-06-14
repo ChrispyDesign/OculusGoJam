@@ -30,6 +30,8 @@ public class MNTY_Umpire : MonoBehaviour
     [Range(1, 3)]
     public int testDifficulty;
 
+    public UmpireControl m_umpire;
+
     bool isDrawSignalSent;
 
     [HideInInspector]
@@ -111,7 +113,8 @@ public class MNTY_Umpire : MonoBehaviour
 
         if (m_opponents.Count == 0)
         {
-            UmpireControl.isObjectiveComplete = true;
+            //m_umpire.isObjectiveComplete = true;
+            m_umpire.gameSuccess();
         }
     }
     

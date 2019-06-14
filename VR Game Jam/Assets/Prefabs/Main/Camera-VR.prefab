@@ -778,6 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2f14fc5aa1a1a4f90da63b4293afd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isShootableAnytime: 1
   m_umpire: {fileID: 0}
 --- !u!1001 &4852856652190584811
 PrefabInstance:
@@ -800,7 +801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 488160, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 3}
       propertyPath: m_LocalRotation.x
