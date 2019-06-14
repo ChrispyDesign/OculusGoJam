@@ -20,6 +20,7 @@ public class UmpireControl : MonoBehaviour {
     float reactionTimer;
 
     public TextMeshPro ready_txt;
+    public TextMeshPro wait_txt;
     public TextMeshPro draw_txt;
     public TextMeshPro timer_txt;
 
@@ -60,6 +61,7 @@ public class UmpireControl : MonoBehaviour {
         {
             isPlayerReady = true;
             ready_txt.enabled = false;
+            wait_txt.enabled = true;
             //Trigger related functions (e.g. Audio, UI)
         }
     }
@@ -74,6 +76,7 @@ public class UmpireControl : MonoBehaviour {
 
     void onDrawIntiated()
     {
+        wait_txt.enabled = false;
         draw_txt.enabled = true;
         timerRunning = true;
         isGameStarted = true;
@@ -94,10 +97,11 @@ public class UmpireControl : MonoBehaviour {
         isPlayerReady       = false;
         timerRunning        = false;
         reactionTimer       = 0.0f;
+        ready_txt.enabled   = true;
+        wait_txt.enabled    = false;
         draw_txt.enabled    = false;
         timer_txt.enabled   = false;
         isGameOver          = false;
-        ready_txt.enabled   = true;
         isObjectiveComplete = false;
         isGameStarted       = false;
     }
