@@ -26,10 +26,13 @@ public class CupRotator : MonoBehaviour
 
     private List<GameObject> m_cups = new List<GameObject>();
     private List<GameObject> m_availableCups = new List<GameObject>();
+    private GameObject m_desiredCup;
     private bool m_isRotating = false;
     private bool m_isGameStarted = false;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
         for (int i = 0; i < m_cupCount; i++)
@@ -45,32 +48,50 @@ public class CupRotator : MonoBehaviour
             cup.transform.position = position;
         }
 
+        ShowDesiredCup();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void Update()
     {
         if (UmpireControl.isPlayerReady && !m_isGameStarted)
         {
-            StartCoroutine(ShowDesiredCup());
+            HideDesiredCup();
+            StartCoroutine(StartRotation());
             m_isGameStarted = true;
         }
     }
 
-    private IEnumerator ShowDesiredCup()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ShowDesiredCup()
     {
-        GameObject randomCup = m_cups[Random.Range(0, m_cups.Count)];
-        MeshRenderer cupMesh = randomCup.GetComponent<MeshRenderer>();
-        CupInteractable cup = randomCup.GetComponent<CupInteractable>();
+        m_desiredCup = m_cups[Random.Range(0, m_cups.Count)];
+        MeshRenderer cupMesh = m_desiredCup.GetComponent<MeshRenderer>();
+        CupInteractable cup = m_desiredCup.GetComponent<CupInteractable>();
 
         cup.SetAsDesiredCup();
         cupMesh.material.color = Color.green;
-
-        yield return new WaitForSeconds(m_cupRevealTime);
-
-        cupMesh.material.color = Color.white;
-        StartCoroutine(StartRotation());
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    private void HideDesiredCup()
+    {
+        MeshRenderer cupMesh = m_desiredCup.GetComponent<MeshRenderer>();
+        CupInteractable cup = m_desiredCup.GetComponent<CupInteractable>();
+        
+        cupMesh.material.color = Color.white;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator StartRotation()
     {
         GameObject cup1 = GetAvailableCup();
@@ -92,9 +113,16 @@ public class CupRotator : MonoBehaviour
         else
             yield return new WaitForSeconds(m_rotateFrequency);
 
-        StartCoroutine(StartRotation());
+        if (!UmpireControl.isGameStarted)
+            StartCoroutine(StartRotation());
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="cup1"></param>
+    /// <param name="cup2"></param>
+    /// <returns></returns>
     private IEnumerator RotateCups(GameObject cup1, GameObject cup2)
     {
         Vector3 midPoint = (cup1.transform.position + cup2.transform.position) * 0.5f;
@@ -137,6 +165,10 @@ public class CupRotator : MonoBehaviour
         return randomCup;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="cup"></param>
     private void ReturnCupToPool(GameObject cup)
     {
         m_availableCups.Add(cup);

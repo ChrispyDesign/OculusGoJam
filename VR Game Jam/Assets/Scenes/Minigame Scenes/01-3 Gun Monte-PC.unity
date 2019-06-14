@@ -166,7 +166,7 @@ MonoBehaviour:
   m_cupSpacing: {x: 0.4, y: 0}
   m_cupRevealTime: 3
   m_rotateTime: 0.25
-  m_rotateFrequency: 0.5
+  m_rotateFrequency: 0.35
   m_pauseTime: 0
   m_pauseOnRotationRange: {x: 5, y: 10}
   m_umpire: {fileID: 1946900096}
@@ -780,6 +780,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685548809192786963, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529124266071819464, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843259937999695436, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19213fbba09b72a49b7b263b7c35d4bd, type: 3}
