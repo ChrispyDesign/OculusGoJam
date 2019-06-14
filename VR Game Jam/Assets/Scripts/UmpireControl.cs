@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UmpireControl : MonoBehaviour {
 
@@ -98,9 +99,7 @@ public class UmpireControl : MonoBehaviour {
 
     public void gameFailed()
     {
-        //GameOver stuff
-        Debug.Log("Failed");
-        resetAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameSuccess()

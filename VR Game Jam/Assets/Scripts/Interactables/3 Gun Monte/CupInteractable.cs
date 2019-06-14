@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CupInteractable : Interactable
 {
+    private MeshRenderer m_meshRenderer;
+    private CapsuleCollider m_capsuleCollider;
+
     private bool m_isDesiredCup = false;
     private UmpireControl m_umpire;
 
@@ -20,12 +23,21 @@ public class CupInteractable : Interactable
 
     #endregion
 
+    private void Start()
+    {
+        m_meshRenderer = GetComponent<MeshRenderer>();
+        m_capsuleCollider = GetComponent<CapsuleCollider>();
+    }
+
     public override void OnInteract()
     {
         if (m_isDesiredCup)
         {
             Debug.Log("Nice!");
             m_umpire.gameSuccess();
+
+            m_meshRenderer.enabled = false;
+            m_capsuleCollider.enabled = false;
         }
         else
         {

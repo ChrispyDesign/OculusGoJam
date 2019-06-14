@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 3965992}
   - component: {fileID: 3965991}
   - component: {fileID: 3965990}
+  - component: {fileID: 3965993}
   m_Layer: 0
   m_Name: Holster
   m_TagString: Untagged
@@ -203,6 +204,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3965988}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &3965993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2f14fc5aa1a1a4f90da63b4293afd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_umpire: {fileID: 1946900098}
 --- !u!4 &333963743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 914732948921788577, guid: 1b38f42d0ee025946a7a0b556645db17,
@@ -1034,10 +1048,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 397368686098224421, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+    - target: {fileID: 1154344522682600424, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
-      propertyPath: m_Name
-      value: GameUmpire
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620746503258116597, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 397368686098224419, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
@@ -1049,15 +1068,10 @@ PrefabInstance:
       propertyPath: preDrawTime_min
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3620746503258116597, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+    - target: {fileID: 397368686098224421, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154344522682600424, guid: 19213fbba09b72a49b7b263b7c35d4bd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Name
+      value: GameUmpire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19213fbba09b72a49b7b263b7c35d4bd, type: 3}
@@ -1096,6 +1110,18 @@ MonoBehaviour:
   prefab_FailureTarget: {fileID: 5973513245101442445, guid: 9a4ac4e208c89e545a53ba0067cab9d2,
     type: 3}
   testDifficulty: 1
+--- !u!114 &1946900098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 397368686098224419, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1946900094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946900096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d75a65fe91af8e48815566c603350e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &914732949230045566
 PrefabInstance:
   m_ObjectHideFlags: 0

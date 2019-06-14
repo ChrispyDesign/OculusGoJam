@@ -27,6 +27,7 @@ public class CupRotator : MonoBehaviour
     private List<GameObject> m_cups = new List<GameObject>();
     private List<GameObject> m_availableCups = new List<GameObject>();
     private bool m_isRotating = false;
+    private bool m_isGameStarted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,15 @@ public class CupRotator : MonoBehaviour
             cup.transform.position = position;
         }
 
-        StartCoroutine(ShowDesiredCup());
+    }
+
+    private void Update()
+    {
+        if (UmpireControl.isPlayerReady && !m_isGameStarted)
+        {
+            StartCoroutine(ShowDesiredCup());
+            m_isGameStarted = true;
+        }
     }
 
     private IEnumerator ShowDesiredCup()
