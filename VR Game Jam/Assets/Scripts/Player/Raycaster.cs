@@ -36,9 +36,7 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
-                HolsterZone holsterZone = hitObject.GetComponent<HolsterZone>();
-
-                if (m_hoveredObject != hitObject && holsterZone)
+                if (m_hoveredObject != hitObject)
                     Hover(hitObject);
 
                 m_direction = hit.point;
@@ -66,9 +64,7 @@ public class Raycaster : MonoBehaviour
 
             if (hitObject)
             {
-                HolsterZone holsterZone = hitObject.GetComponent<HolsterZone>();
-
-                if (m_hoveredObject != hitObject && holsterZone)
+                if (m_hoveredObject != hitObject)
                     Hover(hitObject);
 
                 m_direction = hit.point;
@@ -89,15 +85,21 @@ public class Raycaster : MonoBehaviour
         {
             m_unhoveredObject = m_hoveredObject; // store unhovered object
 
-            HolsterZone unhoveredHolster = m_unhoveredObject.GetComponent<HolsterZone>();
-            if (unhoveredHolster)
-                unhoveredHolster.OnUnhover();
+            if (m_unhoveredObject != null)
+            {
+                HolsterZone unhoveredHolster = m_unhoveredObject.GetComponent<HolsterZone>();
+                if (unhoveredHolster)
+                    unhoveredHolster.OnUnhover();
+            }
         }
 
         m_hoveredObject = hitObject; // store hovered object
 
-        HolsterZone hoveredHolster = m_hoveredObject.GetComponent<HolsterZone>();
-        if (hoveredHolster)
-            hoveredHolster.OnHover();
+        if (m_hoveredObject)
+        {
+            HolsterZone hoveredHolster = m_hoveredObject.GetComponent<HolsterZone>();
+            if (hoveredHolster)
+                hoveredHolster.OnHover();
+        }
     }
 }

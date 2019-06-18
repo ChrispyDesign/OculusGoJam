@@ -33,7 +33,6 @@ public class CupInteractable : Interactable
     {
         if (m_isDesiredCup)
         {
-            Debug.Log("Nice!");
             m_umpire.gameSuccess();
 
             m_meshRenderer.enabled = false;
@@ -41,7 +40,6 @@ public class CupInteractable : Interactable
         }
         else
         {
-            Debug.Log("Game over!");
             m_umpire.gameFailed();
         }
     }

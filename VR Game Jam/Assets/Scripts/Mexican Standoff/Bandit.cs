@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-struct RingStage
-{
-    public Color colour;
-    [Range(0, 1)]
-    public float percentage;
-}
-
 public class Bandit : Interactable
 {
     private BanditSpawner m_banditSpawner;
 
     [SerializeField] Vector2 m_randomFireRange = new Vector2(5, 10);
-    [SerializeField] List<RingStage> m_ringStages;
     private float m_randomFireTime;
     
     [SerializeField] GameObject m_fireRing;
+    [SerializeField] Gradient m_gradient;
 
     #region setters
 
@@ -59,7 +51,7 @@ public class Bandit : Interactable
             Vector3 newNewSizeForRealThisTime = percentage * newSize;
 
             m_fireRing.transform.localScale = newNewSizeForRealThisTime;
-            m_fireRing.GetComponent<SpriteRenderer>().color = DetermineRingColour(percentage);
+            m_fireRing.GetComponent<SpriteRenderer>().color = m_gradient.Evaluate(percentage);
 
             timer += Time.deltaTime;
             yield return null;
@@ -80,30 +72,5 @@ public class Bandit : Interactable
         m_fireRing.transform.localScale = newSize;
 
         return newSize;
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="percentage"></param>
-    /// <returns></returns>
-    private Color DetermineRingColour(float percentage)
-    {
-        RingStage bestMatch = m_ringStages[0];
-
-        for (int i = 0; i < m_ringStages.Count; i++)
-        {
-            RingStage ringStage = m_ringStages[i];
-
-            if (ringStage.percentage > percentage)
-            {
-                float percentageDifference = ringStage.percentage - percentage;
-
-                if (percentageDifference < bestMatch.percentage - percentage)
-                    bestMatch = ringStage;
-            }
-        }
-
-        return bestMatch.colour;
     }
 }
