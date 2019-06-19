@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 267817933857438033}
   - component: {fileID: 3402805794604383454}
   m_Layer: 0
-  m_Name: Target_Civ
+  m_Name: MH_Target_Civ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07a554734952554b83bc6a9daca0550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isShootableAnytime: 0
 --- !u!1001 &2667872691903706510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 75e1b365151933e449aac3404745fc43, type: 2}
+      objectReference: {fileID: 2100000, guid: b69ee602bc3d6d64eaeccf4ec8831763, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
 --- !u!4 &2667872691903835918 stripped

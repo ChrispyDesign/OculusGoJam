@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1757810664474980301}
   - component: {fileID: 267817933857438033}
   m_Layer: 0
-  m_Name: Target_Bandit
+  m_Name: MH_Target_Bandit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f7a243b87e46541807fa5ff1d9a286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isShootableAnytime: 0
 --- !u!65 &267817933857438033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113,6 +114,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a5468976b176a4fa744fe244f129d8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5bb5b80ecd282c47967c8d7c274f24f, type: 3}
 --- !u!4 &2667872691903835918 stripped

@@ -37,11 +37,13 @@ public class MNTY_Umpire : MonoBehaviour
     [HideInInspector]
     public static List<GameObject> m_opponents;
 
+    public int TotalDoors;
+
     void Start()
     {
         m_opponents = new List<GameObject>();
         doorList = new List<GameObject>();
-        for (int i = 1; i < 6; i++)
+        for (int i = 1; i < TotalDoors+1; i++)
         {
             string doorName = "MontyDoor" + i.ToString();
 

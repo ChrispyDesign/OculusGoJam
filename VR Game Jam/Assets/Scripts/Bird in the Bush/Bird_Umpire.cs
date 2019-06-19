@@ -31,7 +31,7 @@ public class Bird_Umpire : MonoBehaviour
 
         birdList            = new List<GameObject>();
         flockSpawned        = false;
-        totalFlock          = Random.Range(totalBirds_min, totalBirds_max);
+        totalFlock          = Random.Range(totalBirds_min, totalBirds_max+1);
         m_umpire            = GetComponent<UmpireControl>();
     }
 

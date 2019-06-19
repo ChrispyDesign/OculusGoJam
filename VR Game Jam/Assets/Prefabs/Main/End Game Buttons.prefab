@@ -104,6 +104,16 @@ PrefabInstance:
       propertyPath: m_isShootableAnytime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3331561396155656002, guid: 609295140d7f509479b09ff743668e28,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331561396155656002, guid: 609295140d7f509479b09ff743668e28,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3331561395238828671, guid: 609295140d7f509479b09ff743668e28,
         type: 3}
       propertyPath: m_Mesh
@@ -192,6 +202,16 @@ PrefabInstance:
     - target: {fileID: 4941165902589225123, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941165902589225120, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941165902589225120, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4683024276004819521, guid: a3d70bb3fda2d5d49aa0ab4c434184c9,
