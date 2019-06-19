@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Bird_Umpire : MonoBehaviour
 {
-    float SPWN_leftSideZ;
-    float SPWN_rightSideZ;
+    public GameObject m_spawnLeftGuide;
+    public GameObject m_spawnRightGuide;
 
-    float SPWN_YMin;
-    float SPWN_YMax;
+    float SPWNLeft_YMin, SPWNLeft_YMax, SPWNRight_YMin, SPWNRight_YMax;
 
     public int totalBirds_min;
     public int totalBirds_max;
@@ -25,10 +24,11 @@ public class Bird_Umpire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SPWN_leftSideZ      = -22.0f;
-        SPWN_rightSideZ     = 22.0f;
-        SPWN_YMin           = -17.0f;
-        SPWN_YMax           = 23.0f;
+        SPWNLeft_YMin   = m_spawnLeftGuide.GetComponent<Collider>().bounds.min.y;
+        SPWNLeft_YMax   = m_spawnLeftGuide.GetComponent<Collider>().bounds.max.y;
+        SPWNRight_YMin  = m_spawnRightGuide.GetComponent<Collider>().bounds.min.y;
+        SPWNRight_YMax   = m_spawnRightGuide.GetComponent<Collider>().bounds.max.y;
+
         birdList            = new List<GameObject>();
         flockSpawned        = false;
         totalFlock          = Random.Range(totalBirds_min, totalBirds_max);
@@ -40,12 +40,30 @@ public class Bird_Umpire : MonoBehaviour
         Vector3 bird_startPos = new Vector3(-51.59f, 0.0f, 0.0f);
         Vector3 bird_endPos = new Vector3(-51.59f, 0.0f, 0.0f);
 
-        int LRRand = Random.Range(0, 1);
-        if (LRRand == 0) { bird_startPos.z = SPWN_leftSideZ; bird_endPos.z = SPWN_rightSideZ; }
-        else { bird_startPos.z = SPWN_rightSideZ; bird_endPos.z = SPWN_leftSideZ; }
 
-        bird_startPos.y = Random.Range(SPWN_YMin, SPWN_YMax);
-        bird_endPos.y = Random.Range(SPWN_YMin, SPWN_YMax);
+        float SPWN_leftSideZ = m_spawnLeftGuide.transform.position.z;
+        float SPWN_rightSideZ = m_spawnRightGuide.transform.position.z;
+
+        float SPWNStart_YMin, SPWNStart_YMax, SPWNEnd_YMin, SPWNEnd_YMax;
+
+        int LRRand = Random.Range(0, 2);
+        if (LRRand == 0)
+        {
+            bird_startPos.z = SPWN_leftSideZ;   bird_endPos.z = SPWN_rightSideZ;
+            SPWNStart_YMin = SPWNLeft_YMin;     SPWNStart_YMax = SPWNLeft_YMax;
+            SPWNEnd_YMin = SPWNRight_YMin;      SPWNEnd_YMax = SPWNRight_YMax;
+        }
+        else
+        {
+            bird_startPos.z = SPWN_rightSideZ;  bird_endPos.z = SPWN_leftSideZ;
+            SPWNStart_YMin = SPWNRight_YMin;    SPWNStart_YMax = SPWNRight_YMax;
+            SPWNEnd_YMin = SPWNLeft_YMin;       SPWNEnd_YMax = SPWNLeft_YMax;
+        }
+
+        
+
+        bird_startPos.y = Random.Range(SPWNStart_YMin, SPWNStart_YMax);
+        bird_endPos.y = Random.Range(SPWNEnd_YMin, SPWNEnd_YMax);
 
         GameObject go = Instantiate(prfb_bird, bird_startPos, Quaternion.identity);
 
