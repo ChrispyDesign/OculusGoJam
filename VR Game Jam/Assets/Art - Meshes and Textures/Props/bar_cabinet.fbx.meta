@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 3d131ccb0493dcc41b4e00c0f68e24df
+guid: e7c37c700b1e6ae45a58d9f02cace526
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: DoorDark
-    2100002: DoorKnob
-    2100004: SecondaryColour
-    2100006: Lightwood
-    2100008: Cloud
-    2100010: Sand
-    2100012: Sky
-    2100014: Catus
+    2100000: lambert5
+    2100002: lambert4
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Out_Door
-    4300002: Outside_Door
+    4300000: bar_cabinet
   externalObjects: {}
   materials:
     importMaterials: 1
