@@ -5,6 +5,7 @@ using UnityEngine;
 public class BanditSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject m_banditPrefab;
+    [SerializeField] private Vector2 m_fireTimeRange = new Vector2(1, 5);
 
     [Header("Spawn Variables")]
     [SerializeField] private List<Transform> m_spawnPositions;
@@ -37,12 +38,12 @@ public class BanditSpawner : MonoBehaviour
 
             // spawn bandit
             GameObject bandit = Instantiate(m_banditPrefab, spawnTransform);
-            bandit.SetActive(false);
             m_bandits.Add(bandit);
 
             // inject bandit spawner dependency into bandit
             Bandit banditScript = bandit.GetComponent<Bandit>();
             banditScript.SetBanditSpawner(this);
+            banditScript.SetFireTime(Mathf.Lerp(m_fireTimeRange.x, m_fireTimeRange.y, i / (float)m_numberToSpawn));
         }
     }
 

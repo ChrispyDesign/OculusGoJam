@@ -6,14 +6,15 @@ public class Bandit : Interactable
 {
     private BanditSpawner m_banditSpawner;
 
-    [SerializeField] Vector2 m_randomFireRange = new Vector2(5, 10);
-    private float m_randomFireTime;
-    
+    private float m_fireTime;
+
     [SerializeField] GameObject m_fireRing;
+    [SerializeField] float m_fireRingScalar = 1.0f;
     [SerializeField] Gradient m_gradient;
 
     #region setters
 
+    public void SetFireTime(float fireTime) { m_fireTime = fireTime; }
     public void SetBanditSpawner(BanditSpawner banditSpawner) { m_banditSpawner = banditSpawner; }
 
     #endregion
@@ -41,13 +42,13 @@ public class Bandit : Interactable
     /// <returns></returns>
     private IEnumerator FireCountdown()
     {
-        m_randomFireTime = Random.Range(m_randomFireRange.x, m_randomFireRange.y);
+        m_fireRing.SetActive(true);
         Vector3 newSize = ResizeRing();
-        
+
         float timer = 0;
-        while (timer < m_randomFireTime)
+        while (timer < m_fireTime)
         {
-            float percentage = 1 - (timer / m_randomFireTime);
+            float percentage = 1 - (timer / m_fireTime);
             Vector3 newNewSizeForRealThisTime = percentage * newSize;
 
             m_fireRing.transform.localScale = newNewSizeForRealThisTime;
@@ -66,9 +67,7 @@ public class Bandit : Interactable
     /// <returns></returns>
     private Vector3 ResizeRing()
     {
-        float ringSizePercent = m_randomFireTime / (m_randomFireRange.y - m_randomFireRange.x);
-
-        Vector3 newSize = ringSizePercent * m_fireRing.transform.localScale;
+        Vector3 newSize = m_fireTime * m_fireRing.transform.localScale * m_fireRingScalar;
         m_fireRing.transform.localScale = newSize;
 
         return newSize;
