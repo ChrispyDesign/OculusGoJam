@@ -143,13 +143,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_banditPrefab: {fileID: 5973513245101442445, guid: 2e70c8f064c642742942b4c5c60e0941,
     type: 3}
-  m_fireTimeRange: {x: 1, y: 4}
   m_spawnPositions:
   - {fileID: 1068533855}
   - {fileID: 614767361}
   - {fileID: 996132163}
   - {fileID: 1797383575}
-  m_numberToSpawn: 4
+  m_numberToSpawn: 3
 --- !u!4 &292676181
 Transform:
   m_ObjectHideFlags: 0
@@ -611,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305326419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6815357, y: 5.12, z: -3.54}
+  m_LocalPosition: {x: 2.6815357, y: 3.11, z: -3.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -667,7 +666,7 @@ PrefabInstance:
     - target: {fileID: 397368685526476208, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.961
+      value: 3.16
       objectReference: {fileID: 0}
     - target: {fileID: 397368685526476208, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
