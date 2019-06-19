@@ -7,7 +7,9 @@ public class Positive : Interactable
     public override void OnInteract()
     {
         Debug.Log("Yay!");
-        FindObjectOfType<MNTY_Umpire>().onOpponentShot(gameObject);
+
+        var MNT_Ump = FindObjectOfType<MNTY_Umpire>(); if (MNT_Ump) { MNT_Ump.onOpponentShot(gameObject); }
+        var BRD_Ump = FindObjectOfType<Bird_Umpire>(); if (BRD_Ump) { BRD_Ump.onOpponentShot(gameObject); }
         Destroy(gameObject);
     }
 }
