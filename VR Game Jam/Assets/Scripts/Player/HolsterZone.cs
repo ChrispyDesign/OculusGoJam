@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HolsterZone : Interactable
 {
     [SerializeField] private UmpireControl m_umpire;
 
     /// <summary>
-    /// 
+    /// do nothing on interaction
     /// </summary>
     public override void OnInteract()
     {
@@ -15,7 +13,7 @@ public class HolsterZone : Interactable
     }
 
     /// <summary>
-    /// 
+    /// handle hovering
     /// </summary>
     public override void OnHover()
     {
@@ -23,7 +21,7 @@ public class HolsterZone : Interactable
     }
 
     /// <summary>
-    /// 
+    /// handle unhovering
     /// </summary>
     public override void OnUnhover()
     {

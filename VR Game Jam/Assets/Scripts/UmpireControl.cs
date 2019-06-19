@@ -17,7 +17,7 @@ public class UmpireControl : MonoBehaviour {
     [HideInInspector]
     public static bool isGameStarted = false;
 
-    float reactionTimer;
+    public static float reactionTimer;
 
     public TextMeshPro ready_txt;
     public TextMeshPro wait_txt;

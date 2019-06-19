@@ -14,7 +14,8 @@ public class BanditSpawner : MonoBehaviour
     private List<GameObject> m_bandits = new List<GameObject>();
     private List<Transform> m_availableSpawnPositions = new List<Transform>();
 
-    private bool m_isGameStarted;
+    private bool m_isGameStarted = false;
+    private bool m_isGameFinished = false;
 
     /// <summary>
     /// 
@@ -68,8 +69,18 @@ public class BanditSpawner : MonoBehaviour
             m_isGameStarted = true;
         }
 
-        if (m_bandits.Count == 0)
+        if (m_bandits.Count == 0 && !m_isGameFinished)
+        {
             FindObjectOfType<UmpireControl>().gameSuccess();
+
+            float reactionTime = UmpireControl.reactionTimer;
+
+            if (HighscoreManager.GetHighscore("Mexican Standoff") > reactionTime)
+                HighscoreManager.SetHighscore("Mexican Standoff", reactionTime);
+
+            Debug.Log(HighscoreManager.GetHighscore("Mexican Standoff"));
+            m_isGameFinished = true;
+        }
     }
 
     /// <summary>
