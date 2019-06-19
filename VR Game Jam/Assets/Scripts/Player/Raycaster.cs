@@ -27,7 +27,6 @@ public class Raycaster : MonoBehaviour
     public GameObject Raycast(Vector3 origin, Vector3 direction)
     {
         RaycastHit hit;
-        m_direction = direction;
 
         // perform raycast
         if (Physics.Raycast(origin, direction, out hit))
@@ -43,6 +42,10 @@ public class Raycaster : MonoBehaviour
                 return hitObject; // object was hit
             }
         }
+        else
+        {
+            m_direction = direction - origin;
+        }
 
         return null; // no object was hit
     }
@@ -55,7 +58,6 @@ public class Raycaster : MonoBehaviour
     public GameObject Raycast(Ray ray)
     {
         RaycastHit hit;
-        m_direction = ray.direction;
 
         // perform raycast
         if (Physics.Raycast(ray, out hit))
@@ -70,6 +72,10 @@ public class Raycaster : MonoBehaviour
                 m_direction = hit.point;
                 return hitObject; // object was hit
             }
+        }
+        else
+        {
+            m_direction = ray.GetPoint(100);
         }
 
         return null; // no object was hit

@@ -45,8 +45,7 @@ public class Gun : MonoBehaviour
     /// 
     /// </summary>
     /// <param name="target"></param>
-    /// <param name="inputVR"></param>
-    public void Fire(GameObject target, InputOculus inputVR = null)
+    public void Fire(GameObject target)
     {
         Interactable interactable = target.GetComponent<Interactable>();
 
@@ -66,9 +65,6 @@ public class Gun : MonoBehaviour
             }
             else
                 return;
-
-            if (inputVR)
-                inputVR.StartVibrate(m_fireTime, m_fireFrequency, m_fireAmplitude);
         }
     }
 
