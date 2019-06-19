@@ -23,6 +23,7 @@ public class UmpireControl : MonoBehaviour {
     public TextMeshPro wait_txt;
     public TextMeshPro draw_txt;
     public TextMeshPro timer_txt;
+    public TextMeshPro highscore_txt;
 
     [HideInInspector]
     public static bool isObjectiveComplete = false;
@@ -101,6 +102,7 @@ public class UmpireControl : MonoBehaviour {
         wait_txt.enabled    = false;
         draw_txt.enabled    = false;
         timer_txt.enabled   = false;
+        highscore_txt.enabled = false;
         isGameOver          = false;
         isObjectiveComplete = false;
         isGameStarted       = false;
@@ -123,5 +125,11 @@ public class UmpireControl : MonoBehaviour {
 
         //Trigger related functions (e.g. Audio, UI)
 
+    }
+
+    public void ShowHighscore(float highscore)
+    {
+        highscore_txt.text = "Highscore: " + System.Math.Round(highscore, 2);
+        highscore_txt.enabled = true;
     }
 }

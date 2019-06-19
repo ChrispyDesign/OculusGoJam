@@ -46,6 +46,8 @@ public class CupInteractable : Interactable
             if (HighscoreManager.GetHighscore("3 Gun Monte") > reactionTime)
                 HighscoreManager.SetHighscore("3 Gun Monte", reactionTime);
 
+            m_umpire.ShowHighscore(HighscoreManager.GetHighscore("3 Gun Monte"));
+
             m_meshRenderer.enabled = false;
             m_capsuleCollider.enabled = false;
         }

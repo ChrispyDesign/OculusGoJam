@@ -71,14 +71,16 @@ public class BanditSpawner : MonoBehaviour
 
         if (m_bandits.Count == 0 && !m_isGameFinished)
         {
-            FindObjectOfType<UmpireControl>().gameSuccess();
+            UmpireControl umpire = FindObjectOfType<UmpireControl>();
+            umpire.gameSuccess();
 
             float reactionTime = UmpireControl.reactionTimer;
 
             if (HighscoreManager.GetHighscore("Mexican Standoff") > reactionTime)
                 HighscoreManager.SetHighscore("Mexican Standoff", reactionTime);
 
-            Debug.Log(HighscoreManager.GetHighscore("Mexican Standoff"));
+            umpire.ShowHighscore(HighscoreManager.GetHighscore("Mexican Standoff"));
+
             m_isGameFinished = true;
         }
     }

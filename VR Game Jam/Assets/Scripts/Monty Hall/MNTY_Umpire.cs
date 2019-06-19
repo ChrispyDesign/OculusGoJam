@@ -117,6 +117,13 @@ public class MNTY_Umpire : MonoBehaviour
         {
             //m_umpire.isObjectiveComplete = true;
             m_umpire.gameSuccess();
+
+            float reactionTime = UmpireControl.reactionTimer;
+
+            if (HighscoreManager.GetHighscore("Monty Hall") > reactionTime)
+                HighscoreManager.SetHighscore("Monty Hall", reactionTime);
+
+            m_umpire.ShowHighscore(HighscoreManager.GetHighscore("Monty Hall"));
         }
     }
     

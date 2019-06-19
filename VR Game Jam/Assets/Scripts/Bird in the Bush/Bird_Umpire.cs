@@ -91,6 +91,13 @@ public class Bird_Umpire : MonoBehaviour
         if (UmpireControl.isGameStarted && birdList.Count == 0)
         {
             m_umpire.gameSuccess();
+
+            float reactionTime = UmpireControl.reactionTimer;
+
+            if (HighscoreManager.GetHighscore("Bird in the Bush") > reactionTime)
+                HighscoreManager.SetHighscore("Bird in the Bush", reactionTime);
+
+            m_umpire.ShowHighscore(HighscoreManager.GetHighscore("Bird in the Bush"));
         }
     }
 
