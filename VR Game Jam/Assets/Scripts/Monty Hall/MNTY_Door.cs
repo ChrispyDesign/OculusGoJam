@@ -7,8 +7,8 @@ public class MNTY_Door : MonoBehaviour
     bool willBeOpened;
     bool isOpening;
 
-    Vector3 start_rot =  new Vector3(0.0f,0.0f,0.0f);
-    Vector3 end_rot = new Vector3(0.0f, 120.0f, 0.0f);
+    Vector3 start_rot =  new Vector3(0.0f, 180.0f,0.0f);
+    Vector3 end_rot = new Vector3(0.0f, 300.0f, 0.0f);
 
     float timer;
     public float doorOpenTime;

@@ -30,20 +30,22 @@ public class MNTY_Umpire : MonoBehaviour
     [Range(1, 3)]
     public int testDifficulty;
 
-    public UmpireControl m_umpire;
+   UmpireControl m_umpire;
 
     bool isDrawSignalSent;
 
     [HideInInspector]
     public static List<GameObject> m_opponents;
 
-    public int TotalDoors;
+    int m_totalDoors;
 
     void Start()
     {
+        m_totalDoors = 7;
+        m_umpire = GetComponent<UmpireControl>();
         m_opponents = new List<GameObject>();
         doorList = new List<GameObject>();
-        for (int i = 1; i < TotalDoors+1; i++)
+        for (int i = 1; i < m_totalDoors + 1; i++)
         {
             string doorName = "MontyDoor" + i.ToString();
 
