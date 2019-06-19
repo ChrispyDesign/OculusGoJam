@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 749615b78f067c442b8275980b7ed7c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f6084a4a8777d2429e62c36a6dbee53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 0
   m_fireRing: {fileID: 986352229365559773}
-  m_fireRingScalar: 1
+  m_fireRingScalar: 0.5
   m_gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
