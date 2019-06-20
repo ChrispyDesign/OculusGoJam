@@ -9,6 +9,6 @@ public class LevelLoad : Interactable
 
     public override void OnInteract()
     {
-        SceneManager.LoadScene(levelToLoad);
+        FindObjectOfType<TransitionManager>().LoadLevel(levelToLoad);
     }
 }

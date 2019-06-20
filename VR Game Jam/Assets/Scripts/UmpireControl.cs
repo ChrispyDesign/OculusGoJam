@@ -29,6 +29,8 @@ public class UmpireControl : MonoBehaviour {
     [HideInInspector]
     public static bool isObjectiveComplete = false;
 
+    [SerializeField] private TransitionManager m_transitionManager;
+
     // UI elements
     [Header("UI Elements")]
     [SerializeField] private TextMeshPro m_gameStateText;
@@ -49,10 +51,8 @@ public class UmpireControl : MonoBehaviour {
     [SerializeField] private string m_timeOutMessage = "Time Out!";
     [SerializeField] private string m_unholsterMessage = "Be Patient!";
 
-    // the ammount of time to wait on game over
-
-	// Use this for initialization
-	void Awake ()
+    // Use this for initialization
+    void Awake ()
     {
         resetAll();
 	}
@@ -82,7 +82,7 @@ public class UmpireControl : MonoBehaviour {
 
     public void onHolster()
     {
-        if (!isPlayerReady)                                 //Set player as ready at start of game
+        if (!isPlayerReady && !isGameStarted && !isGameOver) //Set player as ready at start of game
         {
             isPlayerReady = true;
 
@@ -112,14 +112,6 @@ public class UmpireControl : MonoBehaviour {
 
         //Trigger related functions (e.g. Audio, UI)
 
-    }
-
-    public void onResetPressed()
-    {
-        if (isGameOver)
-        {
-            resetAll();
-        }
     }
 
     void resetAll()
@@ -158,6 +150,7 @@ public class UmpireControl : MonoBehaviour {
     {
         // player is no longer ready
         isPlayerReady = false;
+        isGameOver = true;
 
         // different message depending on fail condition
         switch (endCondition)
@@ -176,19 +169,18 @@ public class UmpireControl : MonoBehaviour {
         }
 
         // wait an arbritrary amount of time before reloading scene
-        StartCoroutine(WaitForSceneReload());
+        StartCoroutine(PerformFadeOut());
     }
 
     /// <summary>
     /// coroutine which waits an arbritrary amount of time before resetting the scene
     /// </summary>
-    private IEnumerator WaitForSceneReload()
+    private IEnumerator PerformFadeOut()
     {
-        // wait
         yield return new WaitForSeconds(m_gameOverWaitTime);
 
         // reload scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        m_transitionManager.LoadLevel(SceneManager.GetActiveScene().buildIndex);
     }
 
     /// <summary>
