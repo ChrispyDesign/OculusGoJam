@@ -10,7 +10,9 @@ ModelImporter:
     2100000: barrelwood
     2100002: bandmetal
     2300000: barrel_upright
+    2300002: //RootNode
     3300000: barrel_upright
+    3300002: //RootNode
     4300000: barrel_upright
   externalObjects: {}
   materials:

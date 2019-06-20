@@ -5,6 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+public enum EndCondition
+{
+    WrongTarget,
+    TimeOut,
+    Unholster
+}
+
 public class UmpireControl : MonoBehaviour {
 
     [Header("Time Settings")]
@@ -20,21 +27,34 @@ public class UmpireControl : MonoBehaviour {
 
     public static float reactionTimer;
 
-
-    [Header("Text Settings")]
-    public TextMeshPro ready_txt;
-    public TextMeshPro wait_txt;
-    public TextMeshPro draw_txt;
-    public TextMeshPro timer_txt;
-    public TextMeshPro highscore_txt;
-
     [HideInInspector]
     public static bool isObjectiveComplete = false;
 
-    [Header("Audio Settings")]
+    [SerializeField] private TransitionManager m_transitionManager;
 
-	// Use this for initialization
-	void Awake () {
+    // UI elements
+    [Header("UI Elements")]
+    [SerializeField] private TextMeshPro m_gameStateText;
+    [SerializeField] private TextMeshPro m_gameOverText;
+    [SerializeField] private TextMeshPro m_scoreText;
+    [SerializeField] private TextMeshPro m_highscoreText;
+    
+    // game state messages
+    [Header("Game State")]
+    [SerializeField] private string m_readyMessage = "Ready?";
+    [SerializeField] private string m_steadyMessage = "Steady...";
+    [SerializeField] private string m_drawMessage = "Draw!";
+
+    // game over messages
+    [Header("Game Over")]
+    [SerializeField] private float m_gameOverWaitTime = 3.0f;
+    [SerializeField] private string m_wrongTargetMessage = "Wrong Target!";
+    [SerializeField] private string m_timeOutMessage = "Time Out!";
+    [SerializeField] private string m_unholsterMessage = "Be Patient!";
+
+    // Use this for initialization
+    void Awake ()
+    {
         resetAll();
 	}
 	
@@ -63,12 +83,15 @@ public class UmpireControl : MonoBehaviour {
 
     public void onHolster()
     {
-        if (!isPlayerReady)                                 //Set player as ready at start of game
+        if (!isPlayerReady && !isGameStarted && !isGameOver) //Set player as ready at start of game
         {
             isPlayerReady = true;
-            ready_txt.enabled = false;
-            wait_txt.enabled = true;
+
+            // update UI to steady/wait
+            ShowGameState(m_steadyMessage);
+
             //Trigger related functions (e.g. Audio, UI)
+
         }
     }
 
@@ -76,25 +99,20 @@ public class UmpireControl : MonoBehaviour {
     {
         if (isPlayerReady && !isGameStarted)
         {
-            gameFailed();
+            gameFailed(EndCondition.Unholster);
         }
     }
 
     void onDrawIntiated()
     {
-        wait_txt.enabled = false;
-        draw_txt.enabled = true;
+        // update UI to draw
+        ShowGameState(m_drawMessage);
+
         timerRunning = true;
         isGameStarted = true;
-        //Trigger related functions (e.g. Audio, UI)
-    }
 
-    public void onResetPressed()
-    {
-        if (isGameOver)
-        {
-            resetAll();
-        }
+        //Trigger related functions (e.g. Audio, UI)
+
     }
 
     void resetAll()
@@ -103,38 +121,128 @@ public class UmpireControl : MonoBehaviour {
         isPlayerReady       = false;
         timerRunning        = false;
         reactionTimer       = 0.0f;
-        ready_txt.enabled   = true;
-        wait_txt.enabled    = false;
-        draw_txt.enabled    = false;
-        timer_txt.enabled   = false;
-        highscore_txt.enabled = false;
+
+        // show ready UI element
+        ShowGameState(m_readyMessage);
+
         isGameOver          = false;
         isObjectiveComplete = false;
         isGameStarted       = false;
-    }
-
-    public void gameFailed()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void gameSuccess()
     {
         //game success things
         timerRunning = false;
-        draw_txt.enabled = false;
-        double reactTimeDisplay = System.Math.Round(reactionTimer, 2);
-        timer_txt.text = reactTimeDisplay.ToString();
-        timer_txt.enabled = true;
+
+        // game is over, show the score
         isGameOver = true;
+        ShowScore();
 
         //Trigger related functions (e.g. Audio, UI)
 
     }
 
+    /// <summary>
+    /// game over function which displays a fail message and starts scene reload
+    /// </summary>
+    /// <param name="endCondition"></param>
+    public void gameFailed(EndCondition endCondition = EndCondition.WrongTarget)
+    {
+        // player is no longer ready
+        isPlayerReady = false;
+        isGameOver = true;
+
+        // different message depending on fail condition
+        switch (endCondition)
+        {
+            case EndCondition.WrongTarget:
+                ShowGameOver(m_wrongTargetMessage);
+                break;
+
+            case EndCondition.TimeOut:
+                ShowGameOver(m_timeOutMessage);
+                break;
+
+            case EndCondition.Unholster:
+                ShowGameOver(m_unholsterMessage);
+                break;
+        }
+
+        // wait an arbritrary amount of time before reloading scene
+        StartCoroutine(PerformFadeOut());
+    }
+
+    /// <summary>
+    /// coroutine which waits an arbritrary amount of time before resetting the scene
+    /// </summary>
+    private IEnumerator PerformFadeOut()
+    {
+        yield return new WaitForSeconds(m_gameOverWaitTime);
+
+        // reload scene
+        m_transitionManager.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="text"></param>
+    private void ShowGameState(string text)
+    {
+        // disable other UI elements
+        m_gameOverText.enabled = false;
+        m_scoreText.enabled = false;
+        m_highscoreText.enabled = false;
+
+        // show game state UI element
+        m_gameStateText.text = text;
+        m_gameStateText.enabled = true;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="text"></param>
+    private void ShowGameOver(string text)
+    {
+        // disable other UI elements
+        m_gameStateText.enabled = false;
+        m_scoreText.enabled = false;
+        m_highscoreText.enabled = false;
+
+        // show game over UI element
+        m_gameOverText.text = text;
+        m_gameOverText.enabled = true;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ShowScore()
+    {
+        // disable other UI elements
+        m_gameStateText.enabled = false;
+        m_gameOverText.enabled = false;
+
+        // update score UI element
+        double reactTimeDisplay = System.Math.Round(reactionTimer, 2);
+        m_scoreText.text = reactTimeDisplay.ToString();
+        m_scoreText.enabled = true;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="highscore"></param>
     public void ShowHighscore(float highscore)
     {
-        highscore_txt.text = "Highscore: " + System.Math.Round(highscore, 2);
-        highscore_txt.enabled = true;
+        // disable other UI elements
+        m_gameStateText.enabled = false;
+        m_gameOverText.enabled = false;
+
+        // show high score UI element
+        m_highscoreText.text = "Highscore: " + System.Math.Round(highscore, 2);
+        m_highscoreText.enabled = true;
     }
 }

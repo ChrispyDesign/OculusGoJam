@@ -51,6 +51,7 @@ public class CupRotator : MonoBehaviour
             cup.transform.position = position;
         }
 
+        SetDesiredCup();
         ShowDesiredCup();
     }
 
@@ -70,14 +71,21 @@ public class CupRotator : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    private void ShowDesiredCup()
+    private void SetDesiredCup()
     {
         m_desiredCup = m_cups[Random.Range(0, m_cups.Count)];
-        MeshRenderer cupMesh = m_desiredCup.GetComponent<MeshRenderer>();
+        CupInteractable cup = m_desiredCup.GetComponent<CupInteractable>();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ShowDesiredCup()
+    {
         CupInteractable cup = m_desiredCup.GetComponent<CupInteractable>();
 
         cup.SetAsDesiredCup();
-        cupMesh.material.color = Color.green;
+        cup.Reveal();
     }
 
     /// <summary>
@@ -85,10 +93,8 @@ public class CupRotator : MonoBehaviour
     /// </summary>
     private void HideDesiredCup()
     {
-        MeshRenderer cupMesh = m_desiredCup.GetComponent<MeshRenderer>();
         CupInteractable cup = m_desiredCup.GetComponent<CupInteractable>();
-        
-        cupMesh.material.color = Color.white;
+        cup.Hide();
     }
 
     /// <summary>

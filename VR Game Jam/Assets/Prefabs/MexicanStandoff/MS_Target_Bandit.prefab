@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 3444906693134080720}
   - component: {fileID: 267817933857438033}
   - component: {fileID: 4171968136972354661}
+  - component: {fileID: 3722899906631226319}
   m_Layer: 0
   m_Name: MS_Target_Bandit
   m_TagString: Untagged
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 0
+  m_animator: {fileID: 3722899906631226319}
   m_fireRing: {fileID: 986352229365559773}
   m_fireRingScalar: 0.5
   m_gradient:
@@ -201,6 +203,25 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+--- !u!95 &3722899906631226319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5973513245101442445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14615516b7e205446a6ae2e8734b2f7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2667872691903706510
 PrefabInstance:
   m_ObjectHideFlags: 0
