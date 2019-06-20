@@ -6,12 +6,14 @@ public class Bandit : Interactable
 {
     private BanditSpawner m_banditSpawner;
 
+    private IEnumerator m_fireCoroutine;
     private float m_fireTime;
 
+    [SerializeField] private Animator m_animator;
     [SerializeField] GameObject m_fireRing;
     [SerializeField] float m_fireRingScalar = 1.0f;
     [SerializeField] Gradient m_gradient;
-
+    
     #region setters
 
     public void SetFireTime(float fireTime) { m_fireTime = fireTime; }
@@ -19,13 +21,23 @@ public class Bandit : Interactable
 
     #endregion
 
+    private void Start()
+    {
+        m_animator.SetTrigger("reveal");
+    }
+
     /// <summary>
     /// 
     /// </summary>
     public override void OnInteract()
     {
-        m_banditSpawner.RemoveBandit(gameObject);
-        Destroy(gameObject);
+        StopCoroutine(m_fireCoroutine);
+        m_fireRing.SetActive(false);
+
+        m_animator.SetTrigger("hide");
+
+        //m_banditSpawner.RemoveBandit(gameObject);
+        //Destroy(gameObject);
     }
 
     /// <summary>
@@ -33,7 +45,7 @@ public class Bandit : Interactable
     /// </summary>
     public void StartFireCountdown()
     {
-        StartCoroutine(FireCountdown());
+        StartCoroutine(m_fireCoroutine = FireCountdown());
     }
 
     /// <summary>
