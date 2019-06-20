@@ -19,27 +19,10 @@ namespace AK
         static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID ENDBGAUDIOSCENE = 1524259163U;
         static const AkUniqueID ONGUNTRIGGER = 2690234956U;
+        static const AkUniqueID ONOBJECTHIT = 1615416770U;
         static const AkUniqueID STARTAMBIENCESCENE = 1384108873U;
         static const AkUniqueID STARTMUSICSCENE = 2539414260U;
     } // namespace EVENTS
-
-    namespace STATES
-    {
-        namespace GAMESTATE
-        {
-            static const AkUniqueID GROUP = 4091656514U;
-
-            namespace STATE
-            {
-                static const AkUniqueID GAMEOVER = 4158285989U;
-                static const AkUniqueID GAMESTARTED = 2893136410U;
-                static const AkUniqueID MAIN_MENU = 2005704188U;
-                static const AkUniqueID PREDRAW = 1750233550U;
-                static const AkUniqueID PREREADY = 1176400293U;
-            } // namespace STATE
-        } // namespace GAMESTATE
-
-    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -53,6 +36,16 @@ namespace AK
                 static const AkUniqueID FULL = 2510516222U;
             } // namespace SWITCH
         } // namespace GUNAMMO
+
+        namespace MUSICSCENE
+        {
+            static const AkUniqueID GROUP = 2120014790U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID TITLE = 3705726509U;
+            } // namespace SWITCH
+        } // namespace MUSICSCENE
 
         namespace SHOTREACTION
         {

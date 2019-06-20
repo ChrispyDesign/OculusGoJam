@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8D9B9B73-8593-4DC0-84DB-DF8D53F69C0F}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{8D9B9B73-8593-4DC0-84DB-DF8D53F69C0F}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="GameState" ID="{F40F927F-A8FC-4B21-96CE-A285261FC57B}">
-					<ChildrenList>
-						<State Name="None" ID="{C73717BE-A074-46BC-AA88-948B908FB539}"/>
-						<State Name="Main_Menu" ID="{150EA351-AE83-413F-81DA-685FCE9E7097}"/>
-						<State Name="PreReady" ID="{B15F1106-A3CC-4EB0-BE21-E722353764E9}"/>
-						<State Name="PreDraw" ID="{E2773DDE-9976-40E7-8174-5C376BFD243C}"/>
-						<State Name="GameStarted" ID="{676C9ECF-2783-468C-B1C3-BB07F5B5D43E}"/>
-						<State Name="GameOver" ID="{F88DEE26-0A3D-4ADF-8310-5FD60259F883}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{8D9B9B73-8593-4DC0-84DB-DF8D53F69C0F}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

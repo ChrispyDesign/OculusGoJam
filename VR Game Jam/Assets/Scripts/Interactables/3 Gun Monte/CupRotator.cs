@@ -30,6 +30,9 @@ public class CupRotator : MonoBehaviour
     private bool m_isRotating = false;
     private bool m_isGameStarted = false;
 
+    [Header("Audio")]
+    public AK.Wwise.Event m_cupMoveSound;
+
     /// <summary>
     /// 
     /// </summary>
@@ -132,7 +135,9 @@ public class CupRotator : MonoBehaviour
         parent.transform.position += midPoint;
         cup1.transform.SetParent(parent.transform);
         cup2.transform.SetParent(parent.transform);
-        
+
+        m_cupMoveSound.Post(cup1);
+
         float timer = 0;
         while (timer <= m_rotateTime)
         {

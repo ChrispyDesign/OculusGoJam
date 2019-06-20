@@ -7,6 +7,7 @@ using TMPro;
 
 public class UmpireControl : MonoBehaviour {
 
+    [Header("Time Settings")]
     public float preDrawTime_min;
     public float preDrawTime_max;
     float preDrawTime;
@@ -19,6 +20,8 @@ public class UmpireControl : MonoBehaviour {
 
     public static float reactionTimer;
 
+
+    [Header("Text Settings")]
     public TextMeshPro ready_txt;
     public TextMeshPro wait_txt;
     public TextMeshPro draw_txt;
@@ -27,6 +30,8 @@ public class UmpireControl : MonoBehaviour {
 
     [HideInInspector]
     public static bool isObjectiveComplete = false;
+
+    [Header("Audio Settings")]
 
 	// Use this for initialization
 	void Awake () {

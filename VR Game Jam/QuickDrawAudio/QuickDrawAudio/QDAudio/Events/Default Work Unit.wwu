@@ -18,6 +18,7 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="OnObjectHit" ID="{F80DF065-D626-4F0E-BF2B-CD9A2DA884AB}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

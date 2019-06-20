@@ -43,6 +43,8 @@ public class Bird_Umpire : MonoBehaviour
 
         float SPWN_leftSideZ = m_spawnLeftGuide.transform.position.z;
         float SPWN_rightSideZ = m_spawnRightGuide.transform.position.z;
+        float SPWN_leftSideX = m_spawnLeftGuide.transform.position.x;
+        float SPWN_rightSideX = m_spawnRightGuide.transform.position.x;
 
         float SPWNStart_YMin, SPWNStart_YMax, SPWNEnd_YMin, SPWNEnd_YMax;
 
@@ -52,12 +54,14 @@ public class Bird_Umpire : MonoBehaviour
             bird_startPos.z = SPWN_leftSideZ;   bird_endPos.z = SPWN_rightSideZ;
             SPWNStart_YMin = SPWNLeft_YMin;     SPWNStart_YMax = SPWNLeft_YMax;
             SPWNEnd_YMin = SPWNRight_YMin;      SPWNEnd_YMax = SPWNRight_YMax;
+            bird_startPos.x = SPWN_leftSideX;   bird_endPos.x = SPWN_rightSideX;
         }
         else
         {
             bird_startPos.z = SPWN_rightSideZ;  bird_endPos.z = SPWN_leftSideZ;
             SPWNStart_YMin = SPWNRight_YMin;    SPWNStart_YMax = SPWNRight_YMax;
             SPWNEnd_YMin = SPWNLeft_YMin;       SPWNEnd_YMax = SPWNLeft_YMax;
+            bird_startPos.x = SPWN_rightSideX;  bird_endPos.x = SPWN_leftSideX;
         }
 
         

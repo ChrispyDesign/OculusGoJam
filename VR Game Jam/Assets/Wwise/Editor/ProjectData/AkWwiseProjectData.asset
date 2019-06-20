@@ -47,7 +47,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: ed78ab3642f4584498007daaa5f91d3f
     GuidInternal: 
-    m_lastTime: -8586406118673129172
+    m_lastTime: -8586406059286863567
     List:
     - name: CallDraw
       guid: 7df7db8caad5fb479b61bbbdf40d9f5b
@@ -91,8 +91,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\MiniGames\3GunMonte\CupMove
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.787677
+      minDuration: 1.685394
     - name: DoorOpen
       guid: 6432bf58ebb3cb4d897793081c1adfab
       id: 1404805401
@@ -137,8 +137,24 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gun\Shooting\OnGunTrigger
       maxAttenuation: 0
-      maxDuration: 5.633334
+      maxDuration: 0.831668
       minDuration: 0.630286
+    - name: OnObjectHit
+      guid: 65f00df826d60e4fbf2bcd9a2da884ab
+      id: 1615416770
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gun
+        ObjectType: 4
+      - ElementName: Shooting
+        ObjectType: 4
+      - ElementName: OnObjectHit
+        ObjectType: 3
+      Path: Default Work Unit\Gun\Shooting\OnObjectHit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: StartAmbienceScene
       guid: ee34b8b051d0694090cdcc6fe34d785c
       id: 1384108873
@@ -179,63 +195,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 739b9b8d9385c04d84dbdf8d53f69c0f
     GuidInternal: 
-    m_lastTime: -8586406819596634386
-    List:
-    - name: GameState
-      guid: 7f920ff4fca8214b96cea285261fc57b
-      id: 4091656514
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: GameState
-        ObjectType: 9
-      Path: Default Work Unit\GameState
-      values:
-      - name: GameOver
-        guid: 26ee8df83d0adf4a83105fd60259f883
-        id: 4158285989
-        PathAndIcons:
-        - ElementName: GameOver
-          ObjectType: 8
-      - name: GameStarted
-        guid: cf9e6c6783278c46b1c3bb07f5b5d43e
-        id: 2893136410
-        PathAndIcons:
-        - ElementName: GameStarted
-          ObjectType: 8
-      - name: Main_Menu
-        guid: 51a30e1583ae3f4181da685fce9e7097
-        id: 2005704188
-        PathAndIcons:
-        - ElementName: Main_Menu
-          ObjectType: 8
-      - name: None
-        guid: be1737c774a0bc46aa88948b908fb539
-        id: 748895195
-        PathAndIcons:
-        - ElementName: None
-          ObjectType: 8
-      - name: PreDraw
-        guid: de3d77e27699e74081745c376bfd243c
-        id: 1750233550
-        PathAndIcons:
-        - ElementName: PreDraw
-          ObjectType: 8
-      - name: PreReady
-        guid: 06115fb1cca3b04ebe21e722353764e9
-        id: 1176400293
-        PathAndIcons:
-        - ElementName: PreReady
-          ObjectType: 8
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8586406032763780575
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 399e8e2b8037e84785d31c7720704678
     GuidInternal: 
-    m_lastTime: -8586406164919936237
+    m_lastTime: -8586406032602679433
     List:
     - name: GunAmmo
       guid: d8c34ad1a2436b43bd1c14c2538cb42e
@@ -258,6 +225,25 @@ MonoBehaviour:
         id: 2510516222
         PathAndIcons:
         - ElementName: Full
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: MusicScene
+      guid: 59d2f9c813834f4ea3a58f72298a8b26
+      id: 2120014790
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicScene
+        ObjectType: 11
+      Path: Default Work Unit\MusicScene
+      values:
+      - name: Title
+        guid: bdef9ac90043b148890fa190f3fec2b0
+        id: 3705726509
+        PathAndIcons:
+        - ElementName: Title
           ObjectType: 10
       ValueGuids: []
       ValueIcons: []
@@ -314,7 +300,10 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /QDAudio
-  - /QDAudio/SoundBanks
-  - /QDAudio/SoundBanks/Default Work Unit
+  - /QDAudio/Events
+  - /QDAudio/Events/Default Work Unit
+  - /QDAudio/Events/Default Work Unit/General
+  - /QDAudio/Events/Default Work Unit/MiniGames
+  - /QDAudio/Events/Default Work Unit/VA
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

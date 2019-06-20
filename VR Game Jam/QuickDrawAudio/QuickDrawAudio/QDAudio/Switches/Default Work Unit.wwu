@@ -18,6 +18,11 @@
 						<Switch Name="Neutral" ID="{15B78D09-8639-4F6B-8FCE-E8684C82B3BD}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="MusicScene" ID="{C8F9D259-8313-4E4F-A3A5-8F72298A8B26}">
+					<ChildrenList>
+						<Switch Name="Title" ID="{C99AEFBD-4300-48B1-890F-A190F3FEC2B0}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
