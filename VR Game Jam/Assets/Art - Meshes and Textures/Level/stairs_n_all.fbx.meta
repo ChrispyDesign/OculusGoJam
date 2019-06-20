@@ -32,6 +32,10 @@ ModelImporter:
     100052: pCube88
     100054: Stairs_1_10
     100056: //RootNode
+    100058: pasted__polySurface21
+    100060: polySurface40
+    100062: polySurface54
+    100064: polySurface55
     400000: group10_pCube3
     400002: group12
     400004: group13
@@ -61,9 +65,14 @@ ModelImporter:
     400052: pCube88
     400054: Stairs_1_10
     400056: //RootNode
+    400058: pasted__polySurface21
+    400060: polySurface40
+    400062: polySurface54
+    400064: polySurface55
     2100000: lambert1
     2100002: darkwood
     2100004: lightwood
+    2100006: pasted__darkwood
     2300000: group10_pCube3
     2300002: group12
     2300004: group13
@@ -92,6 +101,10 @@ ModelImporter:
     2300050: pCube87
     2300052: pCube88
     2300054: Stairs_1_10
+    2300056: pasted__polySurface21
+    2300058: polySurface40
+    2300060: polySurface54
+    2300062: polySurface55
     3300000: group10_pCube3
     3300002: group12
     3300004: group13
@@ -120,6 +133,10 @@ ModelImporter:
     3300050: pCube87
     3300052: pCube88
     3300054: Stairs_1_10
+    3300056: pasted__polySurface21
+    3300058: polySurface40
+    3300060: polySurface54
+    3300062: polySurface55
     4300000: pCube26
     4300002: pCube27
     4300004: pCube28
@@ -148,6 +165,10 @@ ModelImporter:
     4300050: pCube87
     4300052: Stairs_1_10
     4300054: pCube88
+    4300056: polySurface40
+    4300058: polySurface55
+    4300060: polySurface54
+    4300062: pasted__polySurface21
   externalObjects: {}
   materials:
     importMaterials: 1
