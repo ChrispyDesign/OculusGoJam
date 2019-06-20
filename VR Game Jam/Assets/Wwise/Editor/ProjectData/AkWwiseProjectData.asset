@@ -1,0 +1,320 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1653990dabb6f0d41832739bc5a11edf, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3e2eebc21b046642a65e4ec4c4642df4
+    GuidInternal: 
+    m_lastTime: -8586407717614775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: aa3857620a9d0440ae67b8356630ff05
+    GuidInternal: 
+    m_lastTime: -8586407717614775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 689c6b38b544274d901d0d4ec2ff6d8c
+    GuidInternal: 
+    m_lastTime: -8586406118569663681
+    List:
+    - name: GameSoundBank
+      guid: 5d2a505aff19834982c488896d2fe8bd
+      id: 460270446
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameSoundBank
+        ObjectType: 7
+      Path: Default Work Unit\GameSoundBank
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: ed78ab3642f4584498007daaa5f91d3f
+    GuidInternal: 
+    m_lastTime: -8586406118673129172
+    List:
+    - name: CallDraw
+      guid: 7df7db8caad5fb479b61bbbdf40d9f5b
+      id: 3190170207
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VA
+        ObjectType: 4
+      - ElementName: CallDraw
+        ObjectType: 3
+      Path: Default Work Unit\VA\CallDraw
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: CallReady
+      guid: c1a9a342cc89394e93c16ec3a96e6b3c
+      id: 3537723274
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VA
+        ObjectType: 4
+      - ElementName: CallReady
+        ObjectType: 3
+      Path: Default Work Unit\VA\CallReady
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: CupMove
+      guid: 13de1b5d54258c4bb546750201d8b271
+      id: 1014133256
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MiniGames
+        ObjectType: 4
+      - ElementName: 3GunMonte
+        ObjectType: 4
+      - ElementName: CupMove
+        ObjectType: 3
+      Path: Default Work Unit\MiniGames\3GunMonte\CupMove
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: DoorOpen
+      guid: 6432bf58ebb3cb4d897793081c1adfab
+      id: 1404805401
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MiniGames
+        ObjectType: 4
+      - ElementName: Monty's Hall
+        ObjectType: 4
+      - ElementName: DoorOpen
+        ObjectType: 3
+      Path: Default Work Unit\MiniGames\Monty's Hall\DoorOpen
+      maxAttenuation: 0
+      maxDuration: 1.832897
+      minDuration: 0.476055
+    - name: EndBGAudioScene
+      guid: a28ff5c2c4887944a361c2fa2801f771
+      id: 1524259163
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: General
+        ObjectType: 4
+      - ElementName: EndBGAudioScene
+        ObjectType: 3
+      Path: Default Work Unit\General\EndBGAudioScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: OnGunTrigger
+      guid: 3313c3c65828884cb73f1a7ed880ad19
+      id: 2690234956
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gun
+        ObjectType: 4
+      - ElementName: Shooting
+        ObjectType: 4
+      - ElementName: OnGunTrigger
+        ObjectType: 3
+      Path: Default Work Unit\Gun\Shooting\OnGunTrigger
+      maxAttenuation: 0
+      maxDuration: 5.633334
+      minDuration: 0.630286
+    - name: StartAmbienceScene
+      guid: ee34b8b051d0694090cdcc6fe34d785c
+      id: 1384108873
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: General
+        ObjectType: 4
+      - ElementName: StartAmbienceScene
+        ObjectType: 3
+      Path: Default Work Unit\General\StartAmbienceScene
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: StartMusicScene
+      guid: b91b181e578d894dadf49878e89731aa
+      id: 2539414260
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: General
+        ObjectType: 4
+      - ElementName: StartMusicScene
+        ObjectType: 3
+      Path: Default Work Unit\General\StartMusicScene
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b1247c4e8955a74586990fbe8b5e3d9b
+    GuidInternal: 
+    m_lastTime: -8586407717614775808
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 739b9b8d9385c04d84dbdf8d53f69c0f
+    GuidInternal: 
+    m_lastTime: -8586406819596634386
+    List:
+    - name: GameState
+      guid: 7f920ff4fca8214b96cea285261fc57b
+      id: 4091656514
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameState
+        ObjectType: 9
+      Path: Default Work Unit\GameState
+      values:
+      - name: GameOver
+        guid: 26ee8df83d0adf4a83105fd60259f883
+        id: 4158285989
+        PathAndIcons:
+        - ElementName: GameOver
+          ObjectType: 8
+      - name: GameStarted
+        guid: cf9e6c6783278c46b1c3bb07f5b5d43e
+        id: 2893136410
+        PathAndIcons:
+        - ElementName: GameStarted
+          ObjectType: 8
+      - name: Main_Menu
+        guid: 51a30e1583ae3f4181da685fce9e7097
+        id: 2005704188
+        PathAndIcons:
+        - ElementName: Main_Menu
+          ObjectType: 8
+      - name: None
+        guid: be1737c774a0bc46aa88948b908fb539
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: PreDraw
+        guid: de3d77e27699e74081745c376bfd243c
+        id: 1750233550
+        PathAndIcons:
+        - ElementName: PreDraw
+          ObjectType: 8
+      - name: PreReady
+        guid: 06115fb1cca3b04ebe21e722353764e9
+        id: 1176400293
+        PathAndIcons:
+        - ElementName: PreReady
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 399e8e2b8037e84785d31c7720704678
+    GuidInternal: 
+    m_lastTime: -8586406164919936237
+    List:
+    - name: GunAmmo
+      guid: d8c34ad1a2436b43bd1c14c2538cb42e
+      id: 1454789091
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GunAmmo
+        ObjectType: 11
+      Path: Default Work Unit\GunAmmo
+      values:
+      - name: Empty
+        guid: 259fb76496fe8f4bb3ab84a567268214
+        id: 3354297748
+        PathAndIcons:
+        - ElementName: Empty
+          ObjectType: 10
+      - name: Full
+        guid: 790dc5026899dc40829a54ea92ad9124
+        id: 2510516222
+        PathAndIcons:
+        - ElementName: Full
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ShotReaction
+      guid: 81e06c81b61c9b40a0ad0d04590e1d90
+      id: 2933688180
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ShotReaction
+        ObjectType: 11
+      Path: Default Work Unit\ShotReaction
+      values:
+      - name: Failure
+        guid: e0e1b626cf1f864795a06dad7fb4df23
+        id: 3878839773
+        PathAndIcons:
+        - ElementName: Failure
+          ObjectType: 10
+      - name: Neutral
+        guid: 098db71539866b4f8fcee8684c82b3bd
+        id: 670611050
+        PathAndIcons:
+        - ElementName: Neutral
+          ObjectType: 10
+      - name: Positive
+        guid: 5a564c0bfe0ae040ac2d6745ae482398
+        id: 1192865152
+        PathAndIcons:
+        - ElementName: Positive
+          ObjectType: 10
+      - name: Success
+        guid: 934bf09b054eb54c931ec1a7e3dcb5a8
+        id: 3625060726
+        PathAndIcons:
+        - ElementName: Success
+          ObjectType: 10
+      - name: UI
+        guid: a3474b02ced76d489723a64def917cf0
+        id: 1551306167
+        PathAndIcons:
+        - ElementName: UI
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 893fbad0a5b0144ea2cec66477768b4d
+    GuidInternal: 
+    m_lastTime: -8586407717614775808
+    List: []
+  ExpandedItems:
+  - /QDAudio
+  - /QDAudio/SoundBanks
+  - /QDAudio/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

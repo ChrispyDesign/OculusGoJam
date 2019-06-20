@@ -13,6 +13,8 @@ public class MNTY_Door : MonoBehaviour
     float timer;
     public float doorOpenTime;
 
+    public AK.Wwise.Event m_doorOpen_Audio;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -45,6 +47,11 @@ public class MNTY_Door : MonoBehaviour
 
     public void onDrawSignal()
     {
-        if (willBeOpened) { isOpening = true; /*runDoorOpen();*/ }
+        if (willBeOpened)
+        {
+            isOpening = true;
+            m_doorOpen_Audio.Post(gameObject);
+        }
+
     }
 }

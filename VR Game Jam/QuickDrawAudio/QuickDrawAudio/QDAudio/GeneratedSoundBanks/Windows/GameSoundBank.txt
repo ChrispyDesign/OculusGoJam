@@ -1,0 +1,56 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1014133256	CupMove			\Default Work Unit\MiniGames\3GunMonte\CupMove	
+	1384108873	StartAmbienceScene			\Default Work Unit\General\StartAmbienceScene	
+	1404805401	DoorOpen			\Default Work Unit\MiniGames\Monty's Hall\DoorOpen	
+	1524259163	EndBGAudioScene			\Default Work Unit\General\EndBGAudioScene	
+	2539414260	StartMusicScene			\Default Work Unit\General\StartMusicScene	
+	2690234956	OnGunTrigger			\Default Work Unit\Gun\Shooting\OnGunTrigger	
+	3190170207	CallDraw			\Default Work Unit\VA\CallDraw	
+	3537723274	CallReady			\Default Work Unit\VA\CallReady	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1454789091	GunAmmo			\Default Work Unit\GunAmmo	
+	2933688180	ShotReaction			\Default Work Unit\ShotReaction	
+
+Switch	ID	Name	Switch Group			Notes
+	2510516222	Full	GunAmmo			
+	3354297748	Empty	GunAmmo			
+	670611050	Neutral	ShotReaction			
+	1192865152	Positive	ShotReaction			
+	1551306167	UI	ShotReaction			
+	3625060726	Success	ShotReaction			
+	3878839773	Failure	ShotReaction			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	20522367	classic ricochet 4	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 4		298824
+	23614371	positive	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\positive_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Positive\positive		201664
+	42219365	revolver empty click top 1	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 1		42336
+	80198168	revolver empty click top 3	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 3		57792
+	115406940	classic ricochet 7	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 7		348616
+	172519167	revolver empty click top 5	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 5		65048
+	189455754	door open1	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Minigames\MontyHall\door open1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Minigames\Monty's Hall\Opening Doors\door open1		49366
+	191235166	ui-neutral3	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\ui-neutral3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\UI\ui-neutral3		201664
+	215139831	classic ricochet 1	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 1		380836
+	221495400	M1A1 - dry fire	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\M1A1 - dry fire_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\M1A1 - dry fire		67084
+	236522631	classic ricochet 5	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 5		251960
+	296796980	revolver empty click top 7	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 7		112052
+	331999500	classic ricochet 6	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 6		278320
+	347335146	Solid wooden door opening quickly 2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Solid wooden door opening quickly 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Minigames\Monty's Hall\Opening Doors\Solid wooden door opening quickly 2		122944
+	388767601	ui-neutral	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\ui-neutral_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\UI\ui-neutral		403264
+	441223142	classic ricochet 3	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 3		351544
+	454546114	positive2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\positive2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Positive\positive2		201664
+	455496320	classic ricochet 8	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 8		360332
+	524249194	success1	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\success1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Success\success1		940864
+	527088190	revolver empty click top 2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 2		68832
+	566856799	classic ricochet 2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 2		304680
+	661823375	negative	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\negative_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Failure\negative		201664
+	688134773	negative2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\negative2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Failure\negative2		201664
+	792531467	classic ricochet 9	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 9		290036
+	873584322	revolver empty click top 6	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 6		63156
+	898697893	positive3	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\positive3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Positive\positive3		201664
+	902439837	classic ricochet 10	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\classic ricochet 10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\ShotSound\classic ricochet 10		480412
+	958046831	negative3	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\negative3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\Failure\negative3		201664
+	961462209	revolver empty click top 4	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\revolver empty click top 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunEmpty\GunEmpTop\revolver empty click top 4		40440
+	1021989058	door open2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Minigames\MontyHall\door open2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Minigames\Monty's Hall\Opening Doors\door open2		305064
+	1046318597	ui-neutral2	C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\SFX\Gun\Reactions\ui-neutral2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General\Gun\Gun_Trigger\GunShot\OBJ_Reaction\UI\ui-neutral2		201664
+

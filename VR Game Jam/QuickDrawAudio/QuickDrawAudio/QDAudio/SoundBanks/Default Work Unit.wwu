@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{386B9C68-44B5-4D27-901D-0D4EC2FF6D8C}" SchemaVersion="94">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{386B9C68-44B5-4D27-901D-0D4EC2FF6D8C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="GameSoundBank" ID="{5A502A5D-19FF-4983-82C4-88896D2FE8BD}">
+					<ObjectInclusionList>
+						<ObjectRef Name="General" ID="{C81F7EBC-A4F8-42FA-ACD4-C215DA79E175}" WorkUnitID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gun" ID="{9E4DD70D-3B23-46BE-B2E1-CB67AFD96715}" WorkUnitID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MiniGames" ID="{AE0E8B9F-04DB-4B1A-B81E-7A97CF9FC613}" WorkUnitID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="VA" ID="{4EEFE68F-2693-4CDF-96E4-97995E4B0490}" WorkUnitID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

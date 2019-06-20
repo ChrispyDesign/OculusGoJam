@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\s182378\Documents\QuickDraw\VR Game Jam\QuickDrawAudio\QuickDrawAudio\QDAudio\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="460270446" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\GameSoundBank</ObjectPath>
+			<ShortName>GameSoundBank</ShortName>
+			<Path>GameSoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3190170207" Name="CallDraw" ObjectPath="\Events\Default Work Unit\VA\CallDraw" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3537723274" Name="CallReady" ObjectPath="\Events\Default Work Unit\VA\CallReady" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1014133256" Name="CupMove" ObjectPath="\Events\Default Work Unit\MiniGames\3GunMonte\CupMove" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\MiniGames\Monty's Hall\DoorOpen" DurationType="OneShot" DurationMin="0.476055" DurationMax="1.832897"/>
+				<Event Id="1524259163" Name="EndBGAudioScene" ObjectPath="\Events\Default Work Unit\General\EndBGAudioScene" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2690234956" Name="OnGunTrigger" ObjectPath="\Events\Default Work Unit\Gun\Shooting\OnGunTrigger" DurationType="OneShot" DurationMin="0.630286" DurationMax="5.633334"/>
+				<Event Id="1384108873" Name="StartAmbienceScene" ObjectPath="\Events\Default Work Unit\General\StartAmbienceScene" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2539414260" Name="StartMusicScene" ObjectPath="\Events\Default Work Unit\General\StartMusicScene" DurationType="Infinite"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="20522367" Language="SFX">
+					<ShortName>Gun\classic ricochet 4.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 4_10C4C929.wem</Path>
+				</File>
+				<File Id="23614371" Language="SFX">
+					<ShortName>Gun\Reactions\positive.wav</ShortName>
+					<Path>SFX\Gun\Reactions\positive_10C4C929.wem</Path>
+				</File>
+				<File Id="42219365" Language="SFX">
+					<ShortName>revolver empty click top 1.wav</ShortName>
+					<Path>SFX\revolver empty click top 1_10C4C929.wem</Path>
+				</File>
+				<File Id="80198168" Language="SFX">
+					<ShortName>revolver empty click top 3.wav</ShortName>
+					<Path>SFX\revolver empty click top 3_10C4C929.wem</Path>
+				</File>
+				<File Id="115406940" Language="SFX">
+					<ShortName>Gun\classic ricochet 7.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 7_10C4C929.wem</Path>
+				</File>
+				<File Id="172519167" Language="SFX">
+					<ShortName>revolver empty click top 5.wav</ShortName>
+					<Path>SFX\revolver empty click top 5_10C4C929.wem</Path>
+				</File>
+				<File Id="189455754" Language="SFX">
+					<ShortName>Minigames\MontyHall\door open1.wav</ShortName>
+					<Path>SFX\Minigames\MontyHall\door open1_10C4C929.wem</Path>
+				</File>
+				<File Id="191235166" Language="SFX">
+					<ShortName>Gun\Reactions\ui-neutral3.wav</ShortName>
+					<Path>SFX\Gun\Reactions\ui-neutral3_10C4C929.wem</Path>
+				</File>
+				<File Id="215139831" Language="SFX">
+					<ShortName>Gun\classic ricochet 1.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 1_10C4C929.wem</Path>
+				</File>
+				<File Id="221495400" Language="SFX">
+					<ShortName>Gun\M1A1 - dry fire.wav</ShortName>
+					<Path>SFX\Gun\M1A1 - dry fire_10C4C929.wem</Path>
+				</File>
+				<File Id="236522631" Language="SFX">
+					<ShortName>Gun\classic ricochet 5.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 5_10C4C929.wem</Path>
+				</File>
+				<File Id="296796980" Language="SFX">
+					<ShortName>revolver empty click top 7.wav</ShortName>
+					<Path>SFX\revolver empty click top 7_10C4C929.wem</Path>
+				</File>
+				<File Id="331999500" Language="SFX">
+					<ShortName>Gun\classic ricochet 6.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 6_10C4C929.wem</Path>
+				</File>
+				<File Id="347335146" Language="SFX">
+					<ShortName>Solid wooden door opening quickly 2.wav</ShortName>
+					<Path>SFX\Solid wooden door opening quickly 2_10C4C929.wem</Path>
+				</File>
+				<File Id="388767601" Language="SFX">
+					<ShortName>Gun\Reactions\ui-neutral.wav</ShortName>
+					<Path>SFX\Gun\Reactions\ui-neutral_10C4C929.wem</Path>
+				</File>
+				<File Id="441223142" Language="SFX">
+					<ShortName>Gun\classic ricochet 3.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 3_10C4C929.wem</Path>
+				</File>
+				<File Id="454546114" Language="SFX">
+					<ShortName>Gun\Reactions\positive2.wav</ShortName>
+					<Path>SFX\Gun\Reactions\positive2_10C4C929.wem</Path>
+				</File>
+				<File Id="455496320" Language="SFX">
+					<ShortName>Gun\classic ricochet 8.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 8_10C4C929.wem</Path>
+				</File>
+				<File Id="524249194" Language="SFX">
+					<ShortName>Gun\Reactions\success1.wav</ShortName>
+					<Path>SFX\Gun\Reactions\success1_10C4C929.wem</Path>
+				</File>
+				<File Id="527088190" Language="SFX">
+					<ShortName>revolver empty click top 2.wav</ShortName>
+					<Path>SFX\revolver empty click top 2_10C4C929.wem</Path>
+				</File>
+				<File Id="566856799" Language="SFX">
+					<ShortName>Gun\classic ricochet 2.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 2_10C4C929.wem</Path>
+				</File>
+				<File Id="661823375" Language="SFX">
+					<ShortName>Gun\Reactions\negative.wav</ShortName>
+					<Path>SFX\Gun\Reactions\negative_10C4C929.wem</Path>
+				</File>
+				<File Id="688134773" Language="SFX">
+					<ShortName>Gun\Reactions\negative2.wav</ShortName>
+					<Path>SFX\Gun\Reactions\negative2_10C4C929.wem</Path>
+				</File>
+				<File Id="792531467" Language="SFX">
+					<ShortName>Gun\classic ricochet 9.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 9_10C4C929.wem</Path>
+				</File>
+				<File Id="873584322" Language="SFX">
+					<ShortName>revolver empty click top 6.wav</ShortName>
+					<Path>SFX\revolver empty click top 6_10C4C929.wem</Path>
+				</File>
+				<File Id="898697893" Language="SFX">
+					<ShortName>Gun\Reactions\positive3.wav</ShortName>
+					<Path>SFX\Gun\Reactions\positive3_10C4C929.wem</Path>
+				</File>
+				<File Id="902439837" Language="SFX">
+					<ShortName>Gun\classic ricochet 10.wav</ShortName>
+					<Path>SFX\Gun\classic ricochet 10_10C4C929.wem</Path>
+				</File>
+				<File Id="958046831" Language="SFX">
+					<ShortName>Gun\Reactions\negative3.wav</ShortName>
+					<Path>SFX\Gun\Reactions\negative3_10C4C929.wem</Path>
+				</File>
+				<File Id="961462209" Language="SFX">
+					<ShortName>revolver empty click top 4.wav</ShortName>
+					<Path>SFX\revolver empty click top 4_10C4C929.wem</Path>
+				</File>
+				<File Id="1021989058" Language="SFX">
+					<ShortName>Minigames\MontyHall\door open2.wav</ShortName>
+					<Path>SFX\Minigames\MontyHall\door open2_10C4C929.wem</Path>
+				</File>
+				<File Id="1046318597" Language="SFX">
+					<ShortName>Gun\Reactions\ui-neutral2.wav</ShortName>
+					<Path>SFX\Gun\Reactions\ui-neutral2_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

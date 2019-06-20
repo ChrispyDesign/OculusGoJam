@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2B8E9E39-3780-47E8-85D3-1C7720704678}" SchemaVersion="94">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{2B8E9E39-3780-47E8-85D3-1C7720704678}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GunAmmo" ID="{D14AC3D8-43A2-436B-BD1C-14C2538CB42E}">
+					<ChildrenList>
+						<Switch Name="Empty" ID="{64B79F25-FE96-4B8F-B3AB-84A567268214}"/>
+						<Switch Name="Full" ID="{02C50D79-9968-40DC-829A-54EA92AD9124}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="ShotReaction" ID="{816CE081-1CB6-409B-A0AD-0D04590E1D90}">
+					<ChildrenList>
+						<Switch Name="Positive" ID="{0B4C565A-0AFE-40E0-AC2D-6745AE482398}"/>
+						<Switch Name="Failure" ID="{26B6E1E0-1FCF-4786-95A0-6DAD7FB4DF23}"/>
+						<Switch Name="Success" ID="{9BF04B93-4E05-4CB5-931E-C1A7E3DCB5A8}"/>
+						<Switch Name="UI" ID="{024B47A3-D7CE-486D-9723-A64DEF917CF0}"/>
+						<Switch Name="Neutral" ID="{15B78D09-8639-4F6B-8FCE-E8684C82B3BD}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

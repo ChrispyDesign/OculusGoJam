@@ -50,8 +50,6 @@ MonoBehaviour:
   m_reloadTime: 0.5
   m_reloadFrequency: 0.5
   m_reloadAmplitude: 0.5
-  m_holster: {fileID: 0}
-  m_umpire: {fileID: 0}
 --- !u!1 &424507003424515133
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +64,8 @@ GameObject:
   - component: {fileID: 424507003424515125}
   - component: {fileID: 424507003424515128}
   - component: {fileID: 424507003424515135}
+  - component: {fileID: 2254973008564697242}
+  - component: {fileID: 1689068206681517960}
   m_Layer: 0
   m_Name: Camera-PC
   m_TagString: Untagged
@@ -261,3 +261,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_gun: {fileID: 424507002266051835}
   m_camera: {fileID: 424507003424515130}
+--- !u!114 &2254973008564697242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424507003424515133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f8fde2311ecf54dba9e8dcce904ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &1689068206681517960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424507003424515133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f86d8780a35c140a942d37d5a8b8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0

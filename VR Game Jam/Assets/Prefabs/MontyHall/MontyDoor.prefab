@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 914732948921788577}
   - component: {fileID: 4427035438472414876}
+  - component: {fileID: 7097582149175687630}
   m_Layer: 0
   m_Name: MontyDoor
   m_TagString: Untagged
@@ -76,6 +77,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorOpenTime: 0.2
+  m_doorOpen_Audio:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7c60f7f7d5cb7c04682240dc65d2ef70,
+      type: 2}
+--- !u!114 &7097582149175687630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914732948921788576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194e9854b79bc2c4bae9318ab6ab847f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c1e390bf9be9db84887a00c972b9e190,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &8481411780174181719
 PrefabInstance:
   m_ObjectHideFlags: 0

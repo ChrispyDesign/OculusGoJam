@@ -38,3 +38,9 @@ sysinfo.txt
 VR Game Jam/Assets/Oculus/
 
 VR Game Jam/Assets/Oculus\.meta
+
+*.akd
+
+VR Game Jam/QuickDrawAudio/QuickDrawAudio/QDAudio/\.cache/
+
+*.validationcache

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{36AB78ED-F442-4458-9800-7DAAA5F91D3F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Gun" ID="{9E4DD70D-3B23-46BE-B2E1-CB67AFD96715}" ShortID="503753479">
+					<ChildrenList>
+						<Folder Name="Shooting" ID="{411C6113-C92F-43B1-8A90-CED3E36E52E3}" ShortID="453381094">
+							<ChildrenList>
+								<Event Name="OnGunTrigger" ID="{C6C31333-2858-4C88-B73F-1A7ED880AD19}">
+									<ChildrenList>
+										<Action Name="" ID="{500A3380-F573-4C01-9992-0BC479DA8B10}" ShortID="82464300">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gun_Trigger" ID="{B03B4182-87AC-45D0-BA2F-014EC4087134}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="General" ID="{C81F7EBC-A4F8-42FA-ACD4-C215DA79E175}" ShortID="698598223">
+					<ChildrenList>
+						<Event Name="StartMusicScene" ID="{1E181BB9-8D57-4D89-ADF4-9878E89731AA}">
+							<ChildrenList>
+								<Action Name="" ID="{850D1875-9283-45E8-933F-9EE8FA592180}" ShortID="656930020">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{3C896BD2-A390-4520-AE0B-160275850AC9}" WorkUnitID="{C00F5F0C-F807-4BB5-A75A-0AEA95FAE4AD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StartAmbienceScene" ID="{B0B834EE-D051-4069-90CD-CC6FE34D785C}">
+							<ChildrenList>
+								<Action Name="" ID="{E80EEFA6-081E-48B8-B76C-BED15F240E00}" ShortID="545615779">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IndoorAmbience" ID="{F10FC718-8084-49C6-BCAA-D3D8C5B88C85}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EndBGAudioScene" ID="{C2F58FA2-88C4-4479-A361-C2FA2801F771}">
+							<ChildrenList>
+								<Action Name="" ID="{7761F548-729A-4214-8E2D-287B5A692839}" ShortID="981817148">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="VA" ID="{4EEFE68F-2693-4CDF-96E4-97995E4B0490}" ShortID="553780381">
+					<ChildrenList>
+						<Event Name="CallReady" ID="{42A3A9C1-89CC-4E39-93C1-6EC3A96E6B3C}">
+							<ChildrenList>
+								<Action Name="" ID="{A9CBACFA-3957-4DBE-B967-2C54A5BE0250}" ShortID="596896097">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ready" ID="{90FD0A84-0E06-4F77-84D1-8ECD30A5C685}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="CallDraw" ID="{8CDBF77D-D5AA-47FB-9B61-BBBDF40D9F5B}">
+							<ChildrenList>
+								<Action Name="" ID="{8EE84BCC-F72B-4F2C-8B09-F307F972DA83}" ShortID="102900729">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Draw" ID="{AAE102BC-757B-44A0-8770-4BA593C99822}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="MiniGames" ID="{AE0E8B9F-04DB-4B1A-B81E-7A97CF9FC613}" ShortID="843211222">
+					<ChildrenList>
+						<Folder Name="Monty's Hall" ID="{ED32F050-6EB5-47FA-85ED-BA7B2D3B2BB9}" ShortID="600274595">
+							<ChildrenList>
+								<Event Name="DoorOpen" ID="{58BF3264-B3EB-4DCB-8977-93081C1ADFAB}">
+									<ChildrenList>
+										<Action Name="" ID="{DEDBC14D-CCC9-4666-9AA1-665CBCFF4A1B}" ShortID="58072092">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Opening Doors" ID="{437229A4-568F-4E3F-A7BE-60AB58AF3654}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="3GunMonte" ID="{CFB78F5D-69D8-4025-9D9F-D9124D1C8557}" ShortID="211720464">
+							<ChildrenList>
+								<Event Name="CupMove" ID="{5D1BDE13-2554-4B8C-B546-750201D8B271}">
+									<ChildrenList>
+										<Action Name="" ID="{DE8595E2-6127-4DDD-BCB3-B9106E759C18}" ShortID="405727523">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Glass Moved" ID="{21C51445-FC4D-41C8-8DD9-036348840B6D}" WorkUnitID="{280DD311-FB31-43E5-AB48-E585CE3D32C1}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
