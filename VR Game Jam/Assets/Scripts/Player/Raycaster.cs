@@ -5,9 +5,18 @@ public class Raycaster : MonoBehaviour
     [SerializeField] private LineRenderer m_lineRenderer;
     [SerializeField] private Transform m_rightHandAnchor;
     private Vector3 m_direction;
+    private static Vector3 m_hitNormal;
+    private static Vector3 m_hitPoint;
 
     private GameObject m_hoveredObject;
     private GameObject m_unhoveredObject;
+
+    #region getters
+
+    public static Vector3 GetHitNormal() { return m_hitNormal; }
+    public static Vector3 GetHitPoint() { return m_hitPoint; }
+
+    #endregion
 
     /// <summary>
     /// 
@@ -38,7 +47,9 @@ public class Raycaster : MonoBehaviour
                 if (m_hoveredObject != hitObject)
                     Hover(hitObject);
 
-                m_direction = hit.point;
+                m_hitNormal = hit.normal;
+                m_hitPoint = hit.point;
+                m_direction = m_hitPoint;
                 return hitObject; // object was hit
             }
         }
@@ -69,7 +80,9 @@ public class Raycaster : MonoBehaviour
                 if (m_hoveredObject != hitObject)
                     Hover(hitObject);
 
-                m_direction = hit.point;
+                m_hitNormal = hit.normal;
+                m_hitPoint = hit.point;
+                m_direction = m_hitPoint;
                 return hitObject; // object was hit
             }
         }
