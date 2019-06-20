@@ -1,19 +1,40 @@
 fileFormatVersion: 2
-guid: df947cd94c80620409e586bbdb7bf12b
+guid: b3bd978c9066fb54cb66de643b60b1f8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: barrel_upright
-    100002: //RootNode
-    400000: barrel_upright
-    400002: //RootNode
-    2100000: barrelwood
-    2100002: bandmetal
-    2300000: barrel_upright
-    2300002: //RootNode
-    3300000: barrel_upright
-    3300002: //RootNode
-    4300000: barrel_upright
+    100000: initialShadingGroup_Barrel
+    100002: initialShadingGroup_Bullets
+    100004: initialShadingGroup_Cylinder
+    100006: initialShadingGroup_Finger_Holder
+    100008: initialShadingGroup_Handle
+    100010: //RootNode
+    400000: initialShadingGroup_Barrel
+    400002: initialShadingGroup_Bullets
+    400004: initialShadingGroup_Cylinder
+    400006: initialShadingGroup_Finger_Holder
+    400008: initialShadingGroup_Handle
+    400010: //RootNode
+    2100000: initialShadingGroup_BarrelMat
+    2100002: initialShadingGroup_BulletsMat
+    2100004: initialShadingGroup_CylinderMat
+    2100006: initialShadingGroup_Finger_HolderMat
+    2100008: initialShadingGroup_HandleMat
+    2300000: initialShadingGroup_Barrel
+    2300002: initialShadingGroup_Bullets
+    2300004: initialShadingGroup_Cylinder
+    2300006: initialShadingGroup_Finger_Holder
+    2300008: initialShadingGroup_Handle
+    3300000: initialShadingGroup_Barrel
+    3300002: initialShadingGroup_Bullets
+    3300004: initialShadingGroup_Cylinder
+    3300006: initialShadingGroup_Finger_Holder
+    3300008: initialShadingGroup_Handle
+    4300000: initialShadingGroup_Barrel
+    4300002: initialShadingGroup_Bullets
+    4300004: initialShadingGroup_Cylinder
+    4300006: initialShadingGroup_Finger_Holder
+    4300008: initialShadingGroup_Handle
   externalObjects: {}
   materials:
     importMaterials: 1

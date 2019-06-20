@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: df947cd94c80620409e586bbdb7bf12b
+guid: c68ba595e7cfdf540a553b99d13f2780
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: barrel_upright
-    100002: //RootNode
-    400000: barrel_upright
-    400002: //RootNode
-    2100000: barrelwood
-    2100002: bandmetal
-    2300000: barrel_upright
-    2300002: //RootNode
-    3300000: barrel_upright
-    3300002: //RootNode
-    4300000: barrel_upright
+    100000: //RootNode
+    400000: //RootNode
+    2100000: DoorDark
+    2100002: SecondaryColour
+    2100004: Lightwood
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Bar
   externalObjects: {}
   materials:
     importMaterials: 1
