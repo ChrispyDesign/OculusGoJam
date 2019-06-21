@@ -13,12 +13,9 @@ public class MNTY_Door : MonoBehaviour
     float timer;
     public float doorOpenTime;
 
-    AudioSource m_doorOpenSound;
-
     // Start is called before the first frame update
     void Awake()
     {
-        m_doorOpenSound = GetComponent<AudioSource>();
         willBeOpened = false;
         isOpening = false;
         timer = 0.0f;
@@ -48,6 +45,6 @@ public class MNTY_Door : MonoBehaviour
 
     public void onDrawSignal()
     {
-        if (willBeOpened) { isOpening = true; m_doorOpenSound.Play(); }
+        if (willBeOpened) { isOpening = true; /*runDoorOpen();*/ }
     }
 }

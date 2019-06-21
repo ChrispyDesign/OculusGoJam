@@ -304,6 +304,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 396418596475379719, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890006597715222199, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae45deffbc704b54084943f3248aaede, type: 3}
 --- !u!4 &41269951 stripped
@@ -516,6 +526,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 365803541}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &365803543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8404139633239984133, guid: 59556715cbd21fe45bc942409f59a375,
+    type: 3}
+  m_PrefabInstance: {fileID: 365803541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &368238671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -662,6 +678,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361526122548609137, guid: 952ab715cc0a6e642b157f88faec343a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361526122548609137, guid: 952ab715cc0a6e642b157f88faec343a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361526122548609137, guid: 952ab715cc0a6e642b157f88faec343a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 952ab715cc0a6e642b157f88faec343a, type: 3}
@@ -1612,6 +1643,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3867258629170860056, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_holsterZone
+      value: 
+      objectReference: {fileID: 365803543}
     - target: {fileID: 5675658828364741366, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
       propertyPath: m_havePropertiesChanged

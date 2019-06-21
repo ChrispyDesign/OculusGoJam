@@ -192,6 +192,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 138464832}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &138464834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8404139633239984133, guid: 59556715cbd21fe45bc942409f59a375,
+    type: 3}
+  m_PrefabInstance: {fileID: 138464832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &394365717
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,20 +615,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.000000029802322
       objectReference: {fileID: 0}
-    - target: {fileID: 8902108355175776079, guid: 952ab715cc0a6e642b157f88faec343a,
+    - target: {fileID: 4827439355868741017, guid: 952ab715cc0a6e642b157f88faec343a,
         type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1640000821642129430, guid: 952ab715cc0a6e642b157f88faec343a,
+    - target: {fileID: 8902108355175776079, guid: 952ab715cc0a6e642b157f88faec343a,
         type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1640000821642129430, guid: 952ab715cc0a6e642b157f88faec343a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4111398292055284154, guid: 952ab715cc0a6e642b157f88faec343a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2719524266422159818, guid: 952ab715cc0a6e642b157f88faec343a,
         type: 3}
@@ -658,6 +669,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331610742634992579, guid: 952ab715cc0a6e642b157f88faec343a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 952ab715cc0a6e642b157f88faec343a, type: 3}
@@ -814,7 +830,7 @@ PrefabInstance:
     - target: {fileID: 3279639735403131209, guid: ae45deffbc704b54084943f3248aaede,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.84
+      value: -9.351
       objectReference: {fileID: 0}
     - target: {fileID: 3279639735403131209, guid: ae45deffbc704b54084943f3248aaede,
         type: 3}
@@ -910,6 +926,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 396418596475379719, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890006597715222199, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae45deffbc704b54084943f3248aaede, type: 3}
@@ -1231,6 +1257,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 1.39
       objectReference: {fileID: 0}
+    - target: {fileID: 3867258629170860056, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_holsterZone
+      value: 
+      objectReference: {fileID: 138464834}
+    - target: {fileID: 3745656384764629160, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880620422230416180, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19213fbba09b72a49b7b263b7c35d4bd, type: 3}
 --- !u!1 &1906924231 stripped
@@ -1265,7 +1306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spawnLeftGuide: {fileID: 798377570}
   m_spawnRightGuide: {fileID: 418418612}
-  totalBirds_min: 1
+  totalBirds_min: 3
   totalBirds_max: 3
   prfb_bird: {fileID: 695544966977640461, guid: 0f52b3ccf7a94744dbdb7dd8f56f765a,
     type: 3}

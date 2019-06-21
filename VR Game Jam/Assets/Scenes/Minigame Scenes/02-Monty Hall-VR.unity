@@ -197,6 +197,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 12551239}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &12551241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8404139633239984133, guid: 59556715cbd21fe45bc942409f59a375,
+    type: 3}
+  m_PrefabInstance: {fileID: 12551239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &333963743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 914732948921788577, guid: 1b38f42d0ee025946a7a0b556645db17,
@@ -1431,6 +1437,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 396418596475379719, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890006597715222199, guid: ae45deffbc704b54084943f3248aaede,
+        type: 3}
+      propertyPath: m_ShotSound
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae45deffbc704b54084943f3248aaede, type: 3}
 --- !u!4 &1832035850 stripped
@@ -1696,6 +1712,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 7.87
       objectReference: {fileID: 0}
+    - target: {fileID: 3867258629170860056, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_holsterZone
+      value: 
+      objectReference: {fileID: 12551241}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19213fbba09b72a49b7b263b7c35d4bd, type: 3}
 --- !u!4 &1946900095 stripped

@@ -50,8 +50,6 @@ public class UmpireControl : MonoBehaviour {
     [SerializeField] private string m_wrongTargetMessage = "Wrong Target!";
     [SerializeField] private string m_timeOutMessage = "Time Out!";
     [SerializeField] private string m_unholsterMessage = "Be Patient!";
-    public AudioSource m_SuccessSound;
-    public AudioSource m_FailureSound;
 
     // Use this for initialization
     void Awake ()
@@ -136,8 +134,6 @@ public class UmpireControl : MonoBehaviour {
         //game success things
         timerRunning = false;
 
-        m_SuccessSound.Play();
-
         // game is over, show the score
         isGameOver = true;
         ShowScore();
@@ -155,8 +151,6 @@ public class UmpireControl : MonoBehaviour {
         // player is no longer ready
         isPlayerReady = false;
         isGameOver = true;
-
-        m_FailureSound.Play();
 
         // different message depending on fail condition
         switch (endCondition)
