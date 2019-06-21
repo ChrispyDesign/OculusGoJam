@@ -7,6 +7,10 @@ public class InputOculus : MonoBehaviour
     [SerializeField] private Gun m_gun;
     [SerializeField] private Transform m_rightHandAnchor;
 
+    [Header("Particle Systems")]
+    [SerializeField] private ParticleSystem m_muzzleFlash;
+    [SerializeField] private ParticleSystem m_smoke;
+
     private Raycaster m_raycaster;
 
     private IEnumerator m_vibrateRoutine;
@@ -27,7 +31,12 @@ public class InputOculus : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             if (m_gun)
+            {
                 m_gun.Fire(hitObject);
+
+                m_muzzleFlash.Play();
+                m_smoke.Play();
+            }
         }
     }
 
