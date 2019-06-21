@@ -8,5 +8,8 @@ public class Negative : Interactable
     {
         Debug.Log("Oh no!");
         GameObject.Find("GameUmpire").GetComponent<UmpireControl>().gameFailed();
+
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("hide");
     }
 }
