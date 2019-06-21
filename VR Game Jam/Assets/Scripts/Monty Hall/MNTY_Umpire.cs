@@ -41,7 +41,7 @@ public class MNTY_Umpire : MonoBehaviour
 
     void Start()
     {
-        m_totalDoors = 7;
+        m_totalDoors = 5;
         m_umpire = GetComponent<UmpireControl>();
         m_opponents = new List<GameObject>();
         doorList = new List<GameObject>();
