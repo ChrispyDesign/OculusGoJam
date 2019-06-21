@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lineRenderer: {fileID: 424507003424515125}
-  m_rightHandAnchor: {fileID: 424507002266051834}
+  m_lineRendererAnchor: {fileID: 424507002266051834}
 --- !u!114 &424507003424515135
 MonoBehaviour:
   m_ObjectHideFlags: 0

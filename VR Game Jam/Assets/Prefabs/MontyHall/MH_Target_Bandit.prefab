@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3444906693134080720}
   - component: {fileID: 1757810664474980301}
   - component: {fileID: 267817933857438033}
+  - component: {fileID: 4006498752580861847}
   m_Layer: 0
   m_Name: MH_Target_Bandit
   m_TagString: Untagged
@@ -59,6 +60,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0746589, y: 1.7228136, z: 0.16982055}
   m_Center: {x: 0.0017775297, y: 0.859457, z: 0.002116859}
+--- !u!95 &4006498752580861847
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5973513245101442445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14615516b7e205446a6ae2e8734b2f7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2667872691903706510
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BirdBehaviour : MonoBehaviour
 {
+    [SerializeField] private GameObject m_featherParticlePrefab;
+    private Vector3 m_currentPosition;
 
     Vector3 m_destination;
 
@@ -35,6 +37,14 @@ public class BirdBehaviour : MonoBehaviour
         {
             brd_ump.onBirdSurvive();
         }
+
+        m_currentPosition = transform.position;
+    }
+
+    private void OnDestroy()
+    {
+        GameObject featherParticle = Instantiate(m_featherParticlePrefab);
+        featherParticle.transform.position = m_currentPosition;
     }
 
     private Vector3 getTotalSteeringForce()
