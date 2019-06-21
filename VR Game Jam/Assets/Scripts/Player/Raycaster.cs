@@ -3,7 +3,7 @@
 public class Raycaster : MonoBehaviour
 {
     [SerializeField] private LineRenderer m_lineRenderer;
-    [SerializeField] private Transform m_rightHandAnchor;
+    [SerializeField] private Transform m_lineRendererAnchor;
     private Vector3 m_direction;
     private static Vector3 m_hitNormal;
     private static Vector3 m_hitPoint;
@@ -23,7 +23,7 @@ public class Raycaster : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        m_lineRenderer.SetPosition(0, m_rightHandAnchor.position);
+        m_lineRenderer.SetPosition(0, m_lineRendererAnchor.position);
         m_lineRenderer.SetPosition(1, m_direction);
     }
 
