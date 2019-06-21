@@ -4,6 +4,7 @@ public class Raycaster : MonoBehaviour
 {
     [SerializeField] private LineRenderer m_lineRenderer;
     [SerializeField] private Transform m_lineRendererAnchor;
+
     private Vector3 m_direction;
     private static Vector3 m_hitNormal;
     private static Vector3 m_hitPoint;

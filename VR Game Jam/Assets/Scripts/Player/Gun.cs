@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] private int m_maxAmmo = 6;
+    [SerializeField] private GameObject m_reticlePrefab;
+    private GameObject m_reticle;
+    [SerializeField] private int m_maxAmmo = 10000;
     private Ammunition m_ammunition;
     private bool m_isGunInitiated = false;
 
@@ -29,6 +31,7 @@ public class Gun : MonoBehaviour
     /// </summary>
     void Start()
     {
+        m_reticle = Instantiate(m_reticlePrefab);
         m_ammunition = new Ammunition(m_maxAmmo);
     }
 
@@ -39,6 +42,9 @@ public class Gun : MonoBehaviour
             m_ammunition.Reload();
             m_isGunInitiated = true;
         }
+        
+        m_reticle.transform.position = Raycaster.GetHitPoint() + Raycaster.GetHitNormal() * 0.001f;
+        m_reticle.transform.rotation = Quaternion.LookRotation(Raycaster.GetHitNormal());
     }
 
     /// <summary>
