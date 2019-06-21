@@ -179,6 +179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 424507003424515128, guid: 9b65aed52ff08954cbccd42bccd4987d,
+        type: 3}
+      propertyPath: m_lineRendererAnchor
+      value: 
+      objectReference: {fileID: 2131950741}
     - target: {fileID: 7476705983572791360, guid: 9b65aed52ff08954cbccd42bccd4987d,
         type: 3}
       propertyPath: m_umpire
@@ -221,8 +226,8 @@ MonoBehaviour:
   m_cupAnchorPoint: {fileID: 200144288}
   m_cupSpacing: {x: 0.4, y: 0}
   m_cupRevealTime: 2
-  m_rotateTime: 0.5
-  m_rotateFrequency: 0.75
+  m_rotateTime: 0.25
+  m_rotateFrequency: 0.35
   m_pauseTime: 0
   m_pauseOnRotationRange: {x: 5, y: 10}
   m_umpire: {fileID: 1946900096}
@@ -539,6 +544,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1630906374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4080664102720950256, guid: 9b65aed52ff08954cbccd42bccd4987d,
+    type: 3}
+  m_PrefabInstance: {fileID: 78011626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1862165025
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +830,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3867258629170860056, guid: 19213fbba09b72a49b7b263b7c35d4bd,
+        type: 3}
+      propertyPath: m_holsterZone
+      value: 
+      objectReference: {fileID: 1630906374}
     - target: {fileID: 2900111561691758011, guid: 19213fbba09b72a49b7b263b7c35d4bd,
         type: 3}
       propertyPath: m_IsActive
@@ -879,3 +895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d75a65fe91af8e48815566c603350e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2131950741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424507002266051834, guid: 9b65aed52ff08954cbccd42bccd4987d,
+    type: 3}
+  m_PrefabInstance: {fileID: 78011626}
+  m_PrefabAsset: {fileID: 0}

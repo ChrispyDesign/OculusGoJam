@@ -5,8 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
+    [Header("Fading")]
     [SerializeField] private Material m_gameOverFade;
     [SerializeField] private float m_fadeTime = 0.5f;
+    private bool m_isFadeOver = false;
+
+    [Header("Other Dependencies")]
+    [SerializeField] private GameObject m_holsterZone;
+    [SerializeField] private float m_holsterDelay = 0.5f;
+
+    #region getters
+
+    public bool GetIsFadeOver() { return m_isFadeOver; }
+
+    #endregion
 
     private void Awake()
     {
@@ -20,6 +32,7 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator PerformFadeIn()
     {
         float timer = 0;
+        m_holsterZone.SetActive(false);
 
         // wait
         while (timer < m_fadeTime)
@@ -32,6 +45,9 @@ public class TransitionManager : MonoBehaviour
 
             yield return null;
         }
+
+        yield return new WaitForSeconds(m_holsterDelay);
+        m_holsterZone.SetActive(true);
     }
 
     /// <summary>
@@ -51,6 +67,7 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator PerformFadeOut(int buildID)
     {
         float timer = 0;
+        m_holsterZone.SetActive(false);
 
         // wait
         while (timer < m_fadeTime)
