@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &686628431664684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204151237268289584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc9a77ebeeb63024bbc0102a00fed9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &969755841765525223
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +240,7 @@ GameObject:
   - component: {fileID: 4813979122910164567}
   - component: {fileID: 8538268989047357630}
   - component: {fileID: 3101182859921492005}
+  - component: {fileID: 7601055790333027191}
   m_Layer: 0
   m_Name: Bird in the Bush
   m_TagString: Untagged
@@ -303,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 1
   levelToLoad: 4
+  m_loadDelay: 0.5
 --- !u!135 &3101182859921492005
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -316,6 +337,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6492289
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7601055790333027191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206551944416398225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc9a77ebeeb63024bbc0102a00fed9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1412660526156210095
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +820,7 @@ GameObject:
   - component: {fileID: 4997700150596138040}
   - component: {fileID: 4997700150596138042}
   - component: {fileID: 8532940257022171264}
+  - component: {fileID: 6091419450767002840}
   m_Layer: 0
   m_Name: 3 Gun Monte
   m_TagString: Untagged
@@ -862,6 +903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 1
   levelToLoad: 1
+  m_loadDelay: 0.5
 --- !u!135 &8532940257022171264
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -875,6 +917,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6492289
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6091419450767002840
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4997700150596138020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc9a77ebeeb63024bbc0102a00fed9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4997700150765142134
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +949,7 @@ GameObject:
   - component: {fileID: 4997700150765142090}
   - component: {fileID: 4997700150765142132}
   - component: {fileID: 4666896596701636782}
+  - component: {fileID: 1842353626161154465}
   m_Layer: 0
   m_Name: Monty's Hall
   m_TagString: Untagged
@@ -970,6 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 1
   levelToLoad: 2
+  m_loadDelay: 0.5
 --- !u!135 &4666896596701636782
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -983,6 +1046,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6492289
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &1842353626161154465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4997700150765142134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc9a77ebeeb63024bbc0102a00fed9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4997700151054730654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1286,7 @@ GameObject:
   - component: {fileID: 2317009781955529843}
   - component: {fileID: 439430157351832770}
   - component: {fileID: 4878404903257260003}
+  - component: {fileID: 7701794236943347163}
   m_Layer: 0
   m_Name: Mexican Standoff
   m_TagString: Untagged
@@ -1286,6 +1369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isShootableAnytime: 1
   levelToLoad: 3
+  m_loadDelay: 0.5
 --- !u!135 &4878404903257260003
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1299,6 +1383,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.6492289
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7701794236943347163
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321755332072694358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc9a77ebeeb63024bbc0102a00fed9da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &270436827849034844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,10 +1409,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4997700150596138043}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
-      propertyPath: m_Name
-      value: Sheriff_Star
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1362,6 +1461,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
+      propertyPath: m_Name
+      value: Sheriff_Star
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1381,10 +1484,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4997700150765142133}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
-      propertyPath: m_Name
-      value: Sheriff_Star
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1428,6 +1527,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
+      propertyPath: m_Name
+      value: Sheriff_Star
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_CastShadows
@@ -1448,10 +1551,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6697802656275530152}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
-      propertyPath: m_Name
-      value: Sheriff_Star
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1495,6 +1594,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
+      propertyPath: m_Name
+      value: Sheriff_Star
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_CastShadows
@@ -1603,6 +1706,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4997700149879825329}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &204151237268289584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5156111096449719169, guid: fe0fc19774c20434fa456f3a2ffae0e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4997700149879825329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5623843408728611901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1610,10 +1719,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3031085206636027728}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
-      propertyPath: m_Name
-      value: Sheriff_Star
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1657,6 +1762,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
+      propertyPath: m_Name
+      value: Sheriff_Star
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0a8d8b51d3550a549a3cee8178ca08a7, type: 3}
       propertyPath: m_CastShadows
