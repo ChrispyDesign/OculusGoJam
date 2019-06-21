@@ -12,12 +12,14 @@ public class LevelLoad : Interactable
     [Header("Other Dependancies")]
     [SerializeField] private SphereCollider m_collider;
     [SerializeField] private Animator m_animator;
+    public AudioSource m_ShotSound;
 
     /// <summary>
     /// 
     /// </summary>
     public override void OnInteract()
     {
+        m_ShotSound.Play();
         StartCoroutine(Spin());
     }
 

@@ -13,6 +13,8 @@ public class CupInteractable : Interactable
     
     // is this cup the one to shoot?
     private bool m_isDesiredCup = false;
+
+    public AudioSource m_ShotSound;
     
     #region getters
 
@@ -53,6 +55,8 @@ public class CupInteractable : Interactable
         Vector3 force = (Raycaster.GetHitNormal() + Vector3.down) * -1000;
         Vector3 position = Raycaster.GetHitPoint();
         rigidbody.AddForceAtPosition(force, position);
+
+        m_ShotSound.Play();
     }
 
     /// <summary>

@@ -24,6 +24,10 @@ public class Gun : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] private float m_reloadAmplitude = 0.5f;
 
+    [Header("Audio")]
+    public AudioSource m_ShotSound;
+    public AudioSource m_EmptySound;
+
     /// <summary>
     /// 
     /// </summary>
@@ -61,6 +65,11 @@ public class Gun : MonoBehaviour
                 {
                     interactable.OnInteract(); // shoot
                     m_ammunition.Fire(); // and decrease ammo
+                    m_ShotSound.Play();
+                }
+                else
+                {
+                    m_EmptySound.Play();
                 }
             }
             else
