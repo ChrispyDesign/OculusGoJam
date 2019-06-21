@@ -35,9 +35,9 @@ public class Bandit : Interactable
         m_fireRing.SetActive(false);
 
         m_animator.SetTrigger("hide");
+        m_banditSpawner.RemoveBandit(gameObject);
 
-        //m_banditSpawner.RemoveBandit(gameObject);
-        //Destroy(gameObject);
+        GetComponent<BoxCollider>().enabled = false;
     }
 
     /// <summary>
@@ -70,7 +70,7 @@ public class Bandit : Interactable
             yield return null;
         }
 
-        FindObjectOfType<UmpireControl>().gameFailed();
+        FindObjectOfType<UmpireControl>().gameFailed(EndCondition.TimeOut);
     }
 
     /// <summary>

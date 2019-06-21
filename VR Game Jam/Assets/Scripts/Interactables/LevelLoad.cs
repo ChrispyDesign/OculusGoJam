@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoad : Interactable
 {
+    [Header("Loading")]
     public int levelToLoad;
-
     [SerializeField] private float m_loadDelay = 0.5f;
-    private Animator m_animator;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    private void Start()
-    {
-        m_animator = GetComponent<Animator>();
-    }
+    [Header("Other Dependancies")]
+    [SerializeField] private SphereCollider m_collider;
+    [SerializeField] private Animator m_animator;
 
     /// <summary>
     /// 
@@ -33,6 +28,7 @@ public class LevelLoad : Interactable
     private IEnumerator Spin()
     {
         m_animator.SetTrigger("spin");
+        m_collider.enabled = false;
 
         yield return new WaitForSeconds(m_loadDelay);
 
