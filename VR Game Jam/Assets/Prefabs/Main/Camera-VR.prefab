@@ -5612,6 +5612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55491797fb8bfb2428830e9748d13a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_reticlePrefab: {fileID: 6913125707752206157, guid: e11d61f319e759b4e91cb4e5a30c66d2,
+    type: 3}
   m_maxAmmo: 6
   m_fireTime: 0.5
   m_fireFrequency: 0.5

@@ -82,6 +82,7 @@ public class MNTY_Umpire : MonoBehaviour
             //go.transform.SetParent(selectedDoor.transform);
             Vector3 target_pos = selectedDoor.transform.GetChild(1).position;
             go.transform.position = target_pos;
+            go.GetComponent<Animator>().SetTrigger("reveal");
             m_opponents.Add(go);
 
             temp_doors.Remove(selectedDoor);
@@ -96,6 +97,7 @@ public class MNTY_Umpire : MonoBehaviour
             //go.transform.SetParent(selectedDoor.transform);
             Vector3 target_pos = selectedDoor.transform.GetChild(1).position;
             go.transform.position = target_pos;
+            go.GetComponent<Animator>().SetTrigger("reveal");
 
             temp_doors.Remove(selectedDoor);
         }
@@ -105,6 +107,11 @@ public class MNTY_Umpire : MonoBehaviour
         //    leftover.GetComponent<MNTY_Door>().setWillBeOpened(false);
         //}
 
+    }
+
+    public void RemoveBandit(GameObject bandit)
+    {
+        m_opponents.Remove(bandit);
     }
 
     void Update()
